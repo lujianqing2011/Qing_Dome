@@ -1,0 +1,190 @@
+.load{
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+  border-radius: 5rem;
+  box-shadow: 1px 1px 6px #D4D4D4;
+  overflow: hidden
+  & img{
+    position: relative;
+    left: -63px;
+    top: -15px;
+    right: 0;
+    bottom: 0;
+    width: 205px;
+    margin: auto;
+  }
+}
+.pages-title{
+  background: #fff;
+  .title{
+    display: flex;
+    & li{
+      flex: 1;
+      height: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      font-size: .6rem;
+      &.router-link-exact-active,.router-link-active{
+        border-color: red;
+      }
+    }
+  }
+}
+.order-page{
+  background: #f2f2f2;
+  .order-null{
+    background: #fff;
+    .null-pic{
+      padding: 5rem 5rem 4rem 5rem;
+      background: url('../../assets/icon-no.png') no-repeat center center;
+      background-size: 50%;
+    }
+    & p{
+      text-align: center;
+      margin-bottom: .4rem;
+      font-size: .6rem;
+      color: #656565;
+      &.sub-txt{
+        color: #bfbfbf;
+      }
+      &.null-bt{
+        .bt-a{
+          display: inline-block;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          padding: 0rem .8rem;
+          border-radius: 20rem;
+          color: #fff;
+          font-size: .64rem;
+          background: #fe4070;
+        }
+      }
+    }
+  }
+  .acart-box{
+    height: auto;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    .acart-goods{
+      margin-bottom: .4rem;
+      background-color: #fff;
+      .goods_state{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 .5rem;
+        height: 2rem;
+        line-height: 2rem;
+        background: white;
+        font-size: .64rem;
+        & span {
+          display: inline-block;
+        }
+      }
+      .goods{
+        .item{
+          background: #F9F9F9;
+          position: relative;
+          border-top: 1px solid #e8e8e8;
+          padding: .4rem .5rem;
+        }
+        .cart-box{
+          display: flex;
+          .left{
+            width: 4.2rem;
+            height: 4.2rem;
+            background: #eee;
+            & img{
+              width: 100%;
+            }
+          }
+          .center{
+            flex: 2;
+            margin-left: .25rem;
+            & h2{
+              height: 2rem;
+              line-height: 1rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2;
+              word-break: break-word;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              font-size: .58rem;
+            }
+            .standard{
+              margin: .1rem 0;
+              & span{
+                color: #b1b1b1;
+                font-size: .55rem;
+                margin-right: .25rem;
+              }
+            }
+          }
+          .right{
+            flex: 1;
+            text-align: right;
+            width: 5rem;
+            font-size: .6rem;
+            line-height: 1rem;
+            .raw-cost{
+              text-decoration: line-through;
+              color: #888
+            }
+            .true-cost{
+              font-weight: 700;
+              color: #4a4a4a;
+            }
+          }
+        }
+      }
+      .tab-btn{
+        background: #fff;
+        line-height: 0;
+        text-align: right;
+        border: 1px solid #e8e8e8;
+        border-left: 0;
+        border-right: 0;
+        padding: .3rem .5rem;
+        & a{
+          display: inline-block;
+          border: 1px solid #999;
+          padding: .1rem .5rem;
+          height: 1.2rem;
+          line-height: 1.2rem;
+          border-radius: .2rem;
+          color: black;
+          font-size: .6rem;
+          &.bt-red{
+            border-color: red;
+            color: red;
+          }
+        }
+      }
+      .total-price{
+        background: #fff;
+        height: 1.7rem;
+        line-height: 1.7rem;
+        text-align: right;
+        padding-right: .5rem;
+        font-size: 0;
+        & span{
+          display: inline-block;
+          margin-left: .5rem;
+          font-size: .6rem;
+        }
+        & b{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

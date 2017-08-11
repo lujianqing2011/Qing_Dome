@@ -1,0 +1,264 @@
+
+.cart-checkbox{
+  width: 1.1rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  border-radius: 50%;
+  background: url('../../assets/icon-meixuanze.png') no-repeat center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.location{
+  position: absolute;
+  left: .5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.check{
+  background: url('../../assets/icon-xuanze.png') no-repeat center center;
+  background-size: 100%;
+}
+
+.acart-page {
+  background-color: #eee;
+  .acart-box {
+    .acart-goods {
+      position: relative;
+      background: white;
+      margin-bottom: 1px;
+      .item {
+        padding: .5rem 0 .5rem 2rem;
+      }
+      .cart-box {
+        display: flex;
+        position: relative;
+        transition: all 0.5;
+        .left{
+          width: 4.2rem;
+          height: 4.2rem;
+          background: #eee;
+          & img{
+            width: 100%;
+          }
+        }
+        .right{
+          flex: 1;
+          margin: 0 .5rem 0 .25rem;
+          & h2{
+            height: 2rem;
+            line-height: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            word-break: break-word;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            font-size: .58rem;
+          }
+          .standard{
+            margin: .1rem 0;
+            font-size: .6rem;
+            & span{
+              color: #b1b1b1;
+              margin-right: .25rem;
+            }
+          }
+          .price-count{
+            font-size: .6rem;
+            height: 1rem;
+            line-height: 1rem;
+            padding: .25rem 0 0;
+            .price{
+              display: inline-block;
+              color: red;
+              font-weight: 700;
+            }
+            .count-right{
+              float: right;
+              color: #929292;
+            }
+          }
+        }
+        .edit_goods {
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 4.2rem;
+          right: 0rem;
+          height: 100%;
+          transition: all 0.3s;
+          transform: translateX(100%);
+          .count_goods{
+            flex: 1;
+            background: white;
+            display: block;
+            .count {
+              display: flex;
+              margin: 0 .25rem;
+              border-radius: 2px;
+              & a{
+                flex: 1;
+                line-height: 2rem;
+                font-size: .6rem;
+                text-align: center;
+                &.count_bt {
+                  flex: 0 0 2.5rem;
+                  background: #ececec;
+                  &:active{
+                    background: rgba(0, 0, 0, 0.35);
+                  }
+                }
+                &.count_number {
+                  background: #f1f1f1;
+                  font-size: .65rem;
+                }
+              }
+            }
+          }
+          .delete_goods{
+            color: white;
+            height: 100%;
+            line-height: 4.1rem;
+            background: red;
+            font-size: .6rem;
+            text-align: center;
+            width: 0rem;
+            transition: all 0.6s;
+            transform: translate3d(.25rem,0,0);
+            &:active{
+              background: rgba(0, 0, 0, 0.8);
+            }
+          }
+          &.on{
+            transform: translateX(0px);
+            .delete_goods{
+              transform: translate3d(0,0,0);
+              width: 2.25rem;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .payment {
+    height: 3.2rem;
+    background-color: white;
+    .payment-total-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5rem;
+      background: white;
+      display: flex;
+      box-shadow: 1px 0px 10px #FFE6EE;
+      .total-price{
+        flex: 1;
+        margin-left: 2rem;
+        .left{
+          .amount{
+            display: table;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: rgba(255, 59, 132, 0.25);
+            position: relative;
+            top: -0.7rem;
+            padding: .2rem;
+            box-sizing: border-box;
+            float: left;
+            .pic{
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              background: #FF8FBA;
+              border-radius: 50%;
+              vertical-align: middle;
+              display: table-cell;
+              font-size: 1.6rem;
+              color: white;
+              &.highlight{
+                background: #FF3B84;
+              }
+              & .number{
+                display:inline-block;
+                padding: .1rem .25rem;
+                background: rgba(255, 59, 132, 0.8);
+                text-align: center;
+                list-style: none;
+                position: absolute;
+                right: .1rem;
+                top: -.25rem;
+                border-radius: 5rem;
+                font-size: .68rem;
+                color: white;
+                border: 2px solid rgba(255, 255, 255, 0.62);
+              }
+            }
+          }
+          .price{
+            display: inline-block;
+            margin-left: .25rem;
+            height: 100%;
+            color: black;
+            float: left;
+            margin-top: .25rem;
+            .price_j{
+              font-size: .6rem;
+              padding: .2rem 0;
+            }
+            .freight{
+              font-size: .6rem;
+            }
+          }
+        }
+        .orders_bt{
+          width: 5rem;
+          height: 2.5rem;
+          float: right;
+          line-height: 2.5rem;
+          text-align: center;
+          color: white;
+          font-size: .7rem;
+          & button{
+            color: white;
+            background: #FF176D;
+            width: 100%;
+            height: 100%;
+            &.unable{
+              background: #6f6f6f;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart_null {
+    background-color: white;
+    .cart_hint_pic {
+      height: 4rem;
+      background: url('../../assets/icon-no.png') no-repeat center center;
+      background-size: 6rem;
+    }
+    .cart_hint {
+      width: 100%;
+      text-align: center;
+      line-height: 2rem;
+      font-size: .62rem;
+    }
+    .cart_bt {
+      background-color: #fe4070;
+      color: white;
+      font-size: .62rem;
+      width: 5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      border-radius: 20rem;
+      margin: .2rem auto;
+    }
+  }
+}

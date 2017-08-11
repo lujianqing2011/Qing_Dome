@@ -1,0 +1,97 @@
+.page-classify{
+  .classify{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 2.2rem;
+    bottom: 0rem;
+    z-index: 100;
+    .page-star{
+      position: fixed;
+      top: 0;
+      height: 2rem;
+      width: 100%;
+      background: red;
+    }
+    .left{
+      flex: 0 0 4rem;
+      width: 4rem;
+      background: #eee;
+      overflow: hidden;
+      .left-li{
+        & li{
+          padding: .5rem;
+          height: 1.4rem;
+          line-height: 1.4rem;
+          text-align: center;
+          font-size: .6rem;
+          border-bottom: 1px solid #e1e1e1;
+          &:last-child{
+            border-bottom: 0;
+          }
+          &.current{
+            background: #fff;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .right{
+      flex: 1;
+      background: #e3e3e3;
+      overflow: hidden;
+      .right-list{
+        width: 100%;
+        .h2-title{
+          height: 2rem;
+          line-height: 2rem;
+          padding: 0 .5rem;
+          background: #eee;
+          border-left: .15rem solid #9898ff;
+          font-weight: 700;
+          font-size: .6rem;
+        }
+        & ul{
+          & li{
+            margin-top: .25rem;
+            display: flex;
+            .img{
+              flex: 0 0 5rem;
+              width: 5rem;
+              height: 5rem;
+              background: red;
+            }
+            .content{
+              flex: 1;
+              background: black;
+              padding: 0 .25rem;
+              color: white;
+              font-size: .7rem;
+              & h2{
+                font-size: .6rem;
+                height: 2.4rem;
+                line-height: 1.2rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                word-break: break-all;
+              }
+              & .describe{
+                line-height: 1.2rem;
+                font-size: .6rem;
+              }
+              & .price{
+                height: 1.2rem;
+                line-height: 1.2rem;
+                font-size: .6rem;
+                color: red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

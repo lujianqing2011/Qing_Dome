@@ -1,0 +1,1080 @@
+{
+  "users": {
+    "613": "123.png"
+  },
+  "079801": {},
+  "001": {
+    "name": "我叫77777777777",
+    "dizhi": "wushicun",
+    "xinming": "55555555555555"
+  },
+  "login": {
+    "username": "卢见青",
+    "password": "180117qQ",
+    "user_id": "613"
+  },
+  "cartList": [
+    {
+      "id": 1,
+      "goods_id": 13,
+      "goods_checked": false,
+      "goods_freight": 5,
+      "goods_pic": "http://localhost/vue_ljq/src/assets/pic.jpg",
+      "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+      "goods_price": 20,
+      "goods_count": 12,
+      "goods_standard": [
+        {
+          "id": "001",
+          "choose": "41码"
+        },
+        {
+          "id": "0035",
+          "choose": "绿色"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "goods_id": 14,
+      "goods_checked": false,
+      "goods_freight": 0,
+      "goods_pic": "http://localhost/vue_ljq/src/assets/pic.jpg",
+      "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+      "goods_price": 18,
+      "goods_count": 2,
+      "goods_standard": [
+        {
+          "id": "001",
+          "choose": "46码"
+        },
+        {
+          "id": "0035",
+          "choose": "蓝宝石色"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "goods_id": 23,
+      "goods_checked": false,
+      "goods_freight": 15,
+      "goods_pic": "http://localhost/vue_ljq/src/assets/pic.jpg",
+      "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+      "goods_price": 15,
+      "goods_count": 3,
+      "goods_standard": [
+        {
+          "id": "001",
+          "choose": "35码"
+        },
+        {
+          "id": "0035",
+          "choose": "土豪金色"
+        }
+      ]
+    }
+  ],
+  "allOrder": {
+    "id_0": [
+      {
+        "order_number": "0000",
+        "order_type": 0,
+        "order_status": "待付款",
+        "commodity": [
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          },
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "12121能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order_number": "000001",
+        "order_type": 0,
+        "order_status": "待付款",
+        "commodity": [
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id_1": [
+      {
+        "order_number": "1",
+        "order_type": 1,
+        "order_status": "待发货",
+        "commodity": [
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id_2": [
+      {
+        "order_number": "2",
+        "order_type": 2,
+        "order_status": "待收货",
+        "commodity": [
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id_3": [
+      {
+        "order_number": "3",
+        "order_type": 3,
+        "order_status": "待评价",
+        "commodity": [
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          },
+          {
+            "goods_pic": "https://gw.alicdn.com/bao/uploaded/i1/2090521903/TB2BMB.cQ1M.eBjSZPiXXawfpXa_!!2090521903.jpg_120x120q50s150.jpg",
+            "goods_name": "Lebath乐泡机自动感应式给皂机智能家居卫浴挂件音乐泡沫沐浴露盒沐浴液瓶家用无线蓝牙音响 金色",
+            "goods_price": 20,
+            "goods_count": 12,
+            "goods_standard": [
+              {
+                "id": "001",
+                "choose": "41码"
+              },
+              {
+                "id": "0035",
+                "choose": "绿色"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "error": "false",
+    "loadImg": [
+      {
+        "id": "001",
+        "img": "https://img.alicdn.com/bao/uploaded/i2/TB1eHDlOpXXXXawXFXXXXXXXXXX_!!0-item_pic.jpg_790x420Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "079801",
+        "img": "https://img.alicdn.com/bao/uploaded/i2/TB1HMmiLVXXXXcFXpXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "0101",
+        "img": "https://img.alicdn.com/bao/uploaded/i2/TB1HMmiLVXXXXcFXpXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "001123",
+        "img": "https://img.alicdn.com/bao/uploaded/i4/TB1CA13KXXXXXb7aXXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "01201",
+        "img": "https://img.alicdn.com/bao/uploaded/i4/TB1CA13KXXXXXb7aXXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "78001",
+        "img": "https://img.alicdn.com/bao/uploaded/i1/TB1glD6QVXXXXXUapXXXXXXXXXX_!!0-item_pic.jpg_790x420Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "001788",
+        "img": "https://img.alicdn.com/bao/uploaded/i2/TB1HMmiLVXXXXcFXpXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "04501",
+        "img": "https://img.alicdn.com/bao/uploaded/i4/TB1CA13KXXXXXb7aXXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "88001",
+        "img": "https://img.alicdn.com/bao/uploaded/i2/TB1eHDlOpXXXXawXFXXXXXXXXXX_!!0-item_pic.jpg_790x420Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      },
+      {
+        "id": "048801",
+        "img": "https://img.alicdn.com/bao/uploaded/i4/TB1CA13KXXXXXb7aXXXXXXXXXXX_!!0-item_pic.jpg_620x10000Q30s50.jpg_.webp",
+        "title": "感谢喜欢十二点钟的听众，你们的喜欢，是我努力的动力"
+      }
+    ]
+  },
+  "Asort": {
+    "AsortId": "001",
+    "Agoods": [
+      {
+        "goodsId": "00101",
+        "goodsName": "茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+        "goodsPrice": "85",
+        "goodsOriginal": "185",
+        "goodsSales": "152",
+        "goodsFreight": "5",
+        "goodsStandard": [
+          {
+            "pp": "001",
+            "size": "44444"
+          }
+        ],
+        "goodsPic": "http://localhost/vue_ljq/src/assets/111.jpg",
+        "goodsImg": [
+          "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+          "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+        ],
+        "goodsComment": [
+          {
+            "userName": "百万刘",
+            "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+            "rate": "1",
+            "content": "很好吃，太喜欢这个口味了，下次还来光顾",
+            "time": "1469281964000",
+            "pic": [
+              "0010001001.png",
+              "0010001002.png",
+              "0010001003.png"
+            ]
+          }
+        ]
+      },
+      {
+        "goodsId": "00102",
+        "goodsName": "格第 金丝胡桃木家具中式实木双人床1.8米高箱床1.5米 气压高箱床",
+        "goodsPrice": "68",
+        "goodsOriginal": "265",
+        "goodsSales": "12",
+        "goodsFreight": "0",
+        "goodsStandard": {
+          "pp": "002",
+          "size": [
+            "黄金色",
+            "玫瑰红",
+            "橄榄青",
+            "草原绿",
+            "天空蓝",
+            "彩虹色"
+          ],
+          "etalon": [
+            "普通规格",
+            "中级规格",
+            "高级规格",
+            "超级规格"
+          ],
+          "color": [
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            },
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            },
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            },
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            },
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            },
+            {
+              "name": "黄金色",
+              "pic": "00101.png"
+            }
+          ]
+        },
+        "goodsPic": "http://localhost/vue_ljq/src/assets/111.jpg",
+        "goodsImg": [
+          "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+          "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+        ],
+        "goodsComment": [
+          {
+            "userName": "百万刘",
+            "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+            "rate": "0",
+            "content": "很好看",
+            "time": "1469281964000",
+            "pic": [
+              "0010001001.png",
+              "0010001002.png",
+              "0010001003.png"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "goodsList": [
+    {
+      "id": 1,
+      "name": "衣服分类",
+      "goods": [
+        {
+          "id": 1,
+          "goods_id": "001",
+          "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+          "goods_price": "85",
+          "goods_original": "185",
+          "goods_sales": "152",
+          "goods_freight": 5,
+          "goods_standard": {
+            "size": [
+              "32",
+              "15",
+              "13",
+              "45",
+              "78",
+              "10"
+            ],
+            "etalon": [
+              "普通规格",
+              "中级规格",
+              "高级规格",
+              "超级规格"
+            ],
+            "color": [
+              {
+                "name": "青色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "土豪色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "玫瑰红色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              }
+            ]
+          },
+          "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+          "goods_img": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+          ],
+          "goods_comment": [
+            {
+              "type": "0",
+              "userName": "1百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            },
+            {
+              "type": "1",
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            },
+            {
+              "type": "2",
+              "userName": "20百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "箱包分类",
+      "goods": [
+        {
+          "id": 2,
+          "goods_id": "002",
+          "goods_name": "茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+          "goods_price": "85",
+          "goods_original": "185",
+          "goods_sales": "152",
+          "goods_freight": 5,
+          "goods_standard": {
+            "size": [
+              "42",
+              "65",
+              "13",
+              "45",
+              "78",
+              "10"
+            ],
+            "etalon": [
+              "普通规格",
+              "中级规格",
+              "高级规格",
+              "超级规格"
+            ],
+            "color": [
+              {
+                "name": "青色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "五彩色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              }
+            ]
+          },
+          "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+          "goods_img": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+          ],
+          "goods_comment": [
+            {
+              "type": "0",
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            },
+            {
+              "type": "2",
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            },
+            {
+              "type": "2",
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            },
+            {
+              "type": "2",
+              "userName": "20百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": ""
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "goods_id": "021",
+          "goods_name": "021茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+          "goods_price": "95",
+          "goods_original": "185",
+          "goods_sales": "152",
+          "goods_freight": 5,
+          "goods_standard": {
+            "size": [
+              "42",
+              "65",
+              "13",
+              "45",
+              "78",
+              "10"
+            ],
+            "etalon": [
+              "普通规格",
+              "中级规格",
+              "高级规格",
+              "超级规格"
+            ],
+            "color": [
+              {
+                "name": "22青色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "五彩色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              }
+            ]
+          },
+          "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+          "goods_img": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+          ],
+          "goods_comment": [
+            {
+              "type": "1",
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "guessLikeGoods": [
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "goods_id": "001",
+      "goods_name": "11茵曼 2017夏装新款简约净色舒适百搭七分休闲裤女【1112451213454】",
+      "goods_price": "85",
+      "goods_original": "185",
+      "goods_sales": "152",
+      "goods_freight": 5,
+      "goods_standard": {
+        "size": ["32","15","13","45","78","10"],
+        "etalon": ["普通规格","中级规格","高级规格","超级规格"],
+        "color": [
+          {
+            "name": "青色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "土豪色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "玫瑰红色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          },
+          {
+            "name": "黄金色",
+            "pic": "00101.png"
+          }
+        ]
+      },
+      "goods_pic": "http://localhost/vue_ljq/src/assets/111.jpg",
+      "goods_img": [
+        "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+        "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+      ],
+      "goods_comment": [
+        {
+          "type": "0",
+          "userName": "1百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+          ]
+        },
+        {
+          "type": "2",
+          "userName": "20百万刘",
+          "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+          "rate": "0",
+          "content": "很好看",
+          "time": "1469281964000",
+          "pic": ""
+        }
+      ]
+    }
+  ]
+}

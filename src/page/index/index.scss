@@ -1,0 +1,175 @@
+
+.app-index{
+  width: 100%;
+  background: #eee;
+  overflow-y: hidden;
+  .dzdt{
+    background-color: white;
+    & > a{
+      display: block;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .layout-type{
+    background: #fff;
+    padding: .5rem;
+    .mui-flex{
+      display: flex;
+      & > li{
+        flex: 1;
+        width: 0;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+        & a{
+          display: block;
+          text-align: center;
+          color: #000;
+          font-size: .6rem;
+          white-space: nowrap;
+          margin: .4rem;
+          overflow: hidden;
+          & img{
+            width: 2.2rem;
+            display: block;
+            margin: 0 auto .5rem;
+          }
+        }
+      }
+    }
+  }
+  .notice{
+    height: 1.5rem;
+    width: 100%;
+    display: flex;
+    background: #fff;
+    padding: .5rem 0 .5rem 0;
+    .notice-pic{
+      flex: 0 0 11rem;
+      background: url('../../assets/index/notice_pic.jpg') no-repeat;
+      background-size: 100%;
+      margin-left: .5rem;
+    }
+    .notice-center{
+      flex: 1;
+      line-height: 3rem;
+      font-size: 1.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 1.5rem 0 .2rem;
+      position: relative;
+      & .label-new{
+        border: 1px solid red;
+        padding: .3rem .5rem;
+        margin-right: .5rem;
+        font-size: 1.4rem;
+        color: red;
+        border-radius: .2rem;
+      }
+      & .icon_right{
+        display: inline-block;
+        width: 16px;
+        height: 23px;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        background: url('../../assets/index/right_arrow.png') no-repeat right center;
+        background-size: 1rem;
+      }
+    }
+  }
+  .title_h2{
+    display: flex;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: #fff;
+    position: relative;
+    .title{
+      flex: 0 0 5rem;
+      font-size: .68rem;
+      padding-left: .25rem;
+      font-weight: 700;
+    }
+    .more{
+      flex: 1;
+      padding: 0;
+      color: red;
+      font-size: .6rem;
+      font-weight: 600;
+      font-family: Microsoft Yahei,Helvetica,Arial;
+      text-align: right;
+      margin-right: 1rem;
+    }
+    .title_more_icon{
+      position: absolute;
+      display: inline-block;
+      width: .6rem;
+      height: .6rem;
+      right: .25rem;
+      top: .64rem;
+      background: url('../../assets/index/more-arrow.png') no-repeat center center;
+      background-size: .6rem;
+    }
+  }
+  .seckill-goods{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+    .pic-list{
+      font-size: 0;
+      .pic-item{
+        width: 6.5rem;
+        display: inline-block;
+        margin-right: .25rem;
+        &:last-child{
+          margin-right: 0;
+        }
+        & img{
+          width: 100%;
+        }
+      }
+    }
+  }
+.imgs_block{
+    overflow: hidden;
+    .block{
+      & a{
+        display: block;
+      }
+      & img{
+        width: 100%;
+      }
+    }
+  }
+  .module{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    .seckill_time {
+      position: relative;
+      & .time {
+        padding: 1.5rem 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FF6252;
+        font-size: 1.2rem;
+        transform: translate(-50%,-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        .alike {
+          
+        }
+        .alike-b {
+          margin: 0 .25rem;
+        }
+      }
+    }
+  }
+}
