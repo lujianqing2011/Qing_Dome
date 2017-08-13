@@ -125,6 +125,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
 }
@@ -144,15 +146,15 @@ export default{
   overflow-x: auto;
   .head-top{
     width: 100%;
-    height: 2.2rem;
-    line-height: 2.2rem;
+    height: 55px/$ppr;
+    line-height: 55px/$ppr;
     background-color: black;
     display: flex;
     text-align: center;
     color: white;
     font-size: .7rem;
     .left,.right{
-      flex: 0 0 2.2rem;
+      flex: 0 0 55px/$ppr;
     }
     .title{
       flex: 1;
@@ -167,8 +169,8 @@ export default{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0rem .5rem;
-        height: 3.25rem;
+        padding: 0rem 10px/$ppr;
+        height: 66px/$ppr;
         line-height: 3.25rem;
         background: white;
         border: 1px solid #ddd;
@@ -185,11 +187,11 @@ export default{
         }
         .head-name{
           
-          font-size: .64rem;
+          font-size: 1.2rem;
         }
         .head-upload{
           
-          font-size: .72rem;
+          font-size: 1.2rem;
           .portrait{
             width: 48px;
             height: 48px;
@@ -204,9 +206,9 @@ export default{
       border-bottom: 1px solid #ddd;
       .box{
         position: relative;
-        padding: .4rem 1.4rem .4rem .5rem;
-        height: 1.5rem;
-        line-height: 1.5rem;
+        padding: 0 30px/$ppr 0 10px/$ppr;
+        height: 48px/$ppr;
+        line-height: 48px/$ppr;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -214,15 +216,15 @@ export default{
           content: ' ';
           position: absolute;
           background: url('../../../assets/mine/rightarrow_new.png') no-repeat center;
-          background-size: .4rem;
+          background-size: 8px/$ppr;
           top: 0;
           right: 0;
           z-index: 999;
-          width: 1.75rem;
+          width: 30px/$ppr;
           height: 100%;
         }
         .box-h2{
-          font-size: .72rem;
+          font-size: 1.2rem;
           color: black;
           display: flex;
           align-items: center;
@@ -231,33 +233,33 @@ export default{
           }
         }
         .user_name{
-          font-size: .72rem;
+          font-size: 1.2rem;
           color: #000;
         }
       }
     }
     .box-title{
-      height: 1.5rem;
-      line-height: 1.5rem;
-      font-size: .64rem;
+      height: 42px/$ppr;
+      line-height: 42px/$ppr;
+      font-size: 1.2rem;
       color: #777;
-      padding: .25rem .5rem;
+      padding: 0 10px/$ppr;
       border-bottom: 1px solid #ddd;
     }
   }
   .user-quit{
     position: fixed;
-    bottom: 10px;
+    bottom: 10px/$ppr;
     left: 0;
     right: 0;
     width: 96%;
-    height: 2rem;
-    line-height: 2rem;
+    height: 48px/$ppr;
+    line-height: 48px/$ppr;
     margin: 0 auto;
     background: #00C318;
     box-sizing: border-box;
     text-align: center;
-    font-size: .8rem;
+    font-size: 1.4rem;
     color: white;
     border-radius: 4px;
   }

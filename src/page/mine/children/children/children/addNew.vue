@@ -163,6 +163,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
 }
@@ -182,32 +184,31 @@ export default{
   .add-new-page{
     .padding-block{
       .form-box{
-        padding: .5rem .5rem 0.25rem .5rem;
+        padding: 10px/$ppr 10px/$ppr 5px/$ppr;
         background: white;
         .input-new{
-          padding-bottom: .25rem;
+          padding-bottom: 5px/$ppr;
           & label{
             display: flex;
             align-items: center;
-            line-height: 1.4rem;
-            font-size: .8rem;
+            line-height: 34px/$ppr;
             & span{
               flex: 1;
               color: red;
               text-align: right;
-              font-size: .7rem;
+              font-size: 1.4rem;
               line-height: 0;
               display: inline-block;
             }
           }
           & input[type="text"]{
             width: 100%;
-            height: 1.9rem;
-            line-height: 1.9rem;
-            font-size: .7rem;
+            height: 40px/$ppr;
+            line-height: 40px/$ppr;
+            font-size: 1.4rem;
             border: 1px solid #ddd;
             background: white;
-            padding: 0 .4rem;
+            padding: 0 10px/$ppr;
             border-radius: 4px;
             white-space: nowrap;
             overflow: hidden;
@@ -224,23 +225,23 @@ export default{
             }
           }
           & p{
-            margin-top: .4rem;
+            margin-top: 10px/$ppr;
             color: red;
           }
         }
       }
     }
     .addbutton{
-      margin-top: 1rem;
-      padding: 0 .5rem;
+      margin-top: 20px/$ppr;
+      padding: 0 10px/$ppr;
       & button{
         width: 100%;
-        height: 2rem;
-        line-height: 2rem;
+        height: 48px/$ppr;
+        line-height: 48px/$ppr;
         background-color: #02D858;
         border: none;
         outline: none;
-        font-size: .8rem;
+        font-size: 1.4rem;
         color: white;
         border-radius: 4px;
         font-family: Microsoft Yahei;

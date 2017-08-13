@@ -37,6 +37,9 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 // @keyframes tipMove{
 //    0%   { transform: scale(1) }
 //    35%  { transform: scale(.8) }
@@ -66,10 +69,10 @@ export default{
     margin: 0 auto;
     z-index: 1000;
     width: 100%;
-    height: 2.2rem;
-    line-height: 2.2rem;
+    height: 54px/$ppr;
+    line-height: 54px/$ppr;
     .alertText{
-      font-size: .8rem;
+      font-size: 1.4rem;
       text-align: center;
       color: white;
     }

@@ -59,6 +59,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .username-page{
   position: absolute;
   top: 0;
@@ -70,16 +72,16 @@ export default{
   background: #f2f2f2;
   z-index: 66;
   .user-name{
-    padding: .5rem;
+    padding: 10px/$ppr;
     .setname{
       & input{
         width: 100%;
         display: block;
         border: 1px solid #e0e0e0;
         border-radius: 4px;
-        line-height: 1.75rem;
-        font-size: .8rem;
-        padding: .15rem .5rem;
+        line-height: 36px/$ppr;
+        font-size: 1.4rem;
+        padding: 5px/$ppr 10px/$ppr;
         box-sizing: border-box;
         &::-webkit-input-placeholder{
           color: #a9a9a9;
@@ -87,8 +89,8 @@ export default{
         }
       }
       .name-hint{
-        padding: .5rem .25rem 1.1rem .25rem;
-        font-size: .64rem;
+        padding: 6px/$ppr 0 25px/$ppr 5px/$ppr;
+        font-size: 1.2rem;
       }
     }
   }
@@ -98,9 +100,9 @@ export default{
       background: red;
       border: 1px solid #eee;
       color: white;
-      height: 2rem;
-      line-height: 2rem;
-      font-size: .7rem;
+      height: 48px/$ppr;
+      line-height: 48px/$ppr;
+      font-size: 1.4rem;
       font-family: "Microsoft Yahei";
       border-radius: 4px;
       outline: none;

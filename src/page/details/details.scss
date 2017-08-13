@@ -1,4 +1,6 @@
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .details-page{
   width: 100%;
   background-color: #eee;
@@ -11,7 +13,7 @@
       height: 2rem;
       line-height: 2rem;
       text-align: center;
-      font-size: .6rem;
+      font-size: 1.2rem;
       box-sizing: border-box;
       &.router-link-exact-active, &.router-link-active{
         border-bottom: 2px solid red;
@@ -19,15 +21,15 @@
     }
   }
   .d_top{
-    margin-top: 2rem;
+    margin-top: 48px/$ppr;
   }
   .details-basic{
     .details-box{
       background: #fff;
-      padding-top: .3rem;
-      padding: 0 .5rem;
+      padding: 0 10px/$ppr;
       .details-title{
-        font-size: .6rem;
+        line-height: 24px/$ppr;
+        font-size: 1.2rem;
         color: #4d525d;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -35,57 +37,55 @@
         text-overflow: ellipsis;
         word-break: break-all;
         background: #fff;
-        line-height: 1rem;
-        padding-top: .25rem;
+        padding-top: 5px/$ppr;
         font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
       }
       .product-subname{
-        margin: .25rem 0rem .1rem;
         color: rgb(150,150,150);
-        font-size: .6rem;
-        line-height: .55rem;
+        font-size: 1rem;
+        line-height: 20px/$ppr;
       }
       .price{
-        margin: .25rem 0rem .1rem;
-        font-size: .7rem;
+        line-height: 24px/$ppr;
+        font-size: 1.4rem;
         font-weight: 700;
         color: red;
       }
       .cost{
+        line-height: 24px/$ppr;
         color: rgb(150,150,150);
-        margin: .25rem 0 0;
         text-decoration: line-through;
-        font-size: .58rem;
+        font-size: 1.2rem;
       }
     }
     .flex-box{
       display: flex;
       background: #fff;
-      padding: .5rem .5rem;
+      padding: 5px/$ppr 10px/$ppr;
       .flex-1{
         flex: 1;
         color: #6f6f6f;
-        font-size: .55rem;
+        font-size: 1rem;
       }
     }
     .select{
-      height: 2rem;
-      line-height: 2rem;
+      height: 42px/$ppr;
+      line-height: 42px/$ppr;
       background-color: #fff;
-      padding: 0 .5rem;
-      margin-top: .2rem;
-      font-size: .6rem;
+      padding: 0 10px/$ppr;
+      margin-top: 5px/$ppr;
+      font-size: 1.2rem;
       color: #8e8e8e;
       position: relative;
       border-bottom: 1px solid #eee;
       &:after{
         content: ' ';
         background: url('../../assets/also-icon.png') no-repeat right center;
-        background-size: 1rem;
-        width: 2.25rem;
-        font-size: .7rem;
+        background-size: 18px/$ppr;
+        width: 20px/$ppr;
+        font-size: 1.2rem;
         position: absolute;
-        right: .5rem;
+        right: 10px/$ppr;
         top: 0;
         bottom: 0;
         margin: auto;
@@ -93,48 +93,47 @@
     }
     .select_box {
       background: #fff;
-      padding: .5rem;
+      padding: 10px/$ppr;
       & .title-h2{
-        height: 1.5rem;
-        line-height: 1.5rem;
-        font-size: .6rem;
+        height: 30px/$ppr;
+        line-height: 30px/$ppr;
+        font-size: 1.2rem;
       }
     }
     .select_count {
-      padding: 0 .5rem .5rem;
+      padding: 0 10px/$ppr 10px/$ppr;
       background: #fff;
       & .title-h2{
-        height: 1.5rem;
-        line-height: 1.5rem;
-        font-size: .6rem;
+        height: 40px/$ppr;
+        line-height: 40px/$ppr;
+        font-size: 1.2rem;
       }
     }
     .shop-head{
-      padding: .5rem;
+      padding: 10px/$ppr;
       background: white;
-      margin-top: .2rem;
       .head-with{
         display: flex;
       }
       & li{
         flex: 1;
         &.shop-a{
-          max-width: 4rem;
+          max-width: 80px/$ppr;
           border: 1px solid #e7e7e7;
           & img{
             width: 100%;
           }
         }
         &.shop-b{
-          font-size: .65rem;
-          margin-left: .5rem;
+          font-size: 1.4rem;
+          margin-left: 10px/$ppr;
           color: #616161;
         }
         &.shop-bt{
           border: 1px solid #d4d4d4;
-          height: 1.8rem;
-          line-height: 1.8rem;
-          font-size: .65rem;
+          height: 40px/$ppr;
+          line-height: 40px/$ppr;
+          font-size: 1.4rem;
           text-align: center;
           border-radius: 2px;
           &.b-left{
@@ -149,18 +148,18 @@
         padding: .6rem;
         & li{
           text-align: center;
-          font-size: .6rem;
+          font-size: 1.2rem;
         }
       }
     }
   }
   .fixed-bottom{
-    height: 2.5rem;
+    height: 60px/$ppr;
     background: #fff;
     overflow: hidden;
     .five-cart{
-      height: 2.5rem;
-      line-height: 2.5rem;
+      height: 60px/$ppr;
+      line-height: 60px/$ppr;
       position: fixed;
       width: 100%;
       display: flex;
@@ -168,32 +167,34 @@
       box-shadow: 0px 2px 8px #b3b3b3;
       bottom: 0;
       background-color: rgba(255, 255, 255, 0.90);
-      font-size: .6rem;
+      font-size: 1.2rem;
       .flex-1{
         flex: 1;
         width: 100%;
-        height: 2.5rem;
+        height: 100%;
         .two,.three{
           width: 50%;
           height: 100%;
           float: left;
           text-align: center;
-          line-height: .8rem;
+          line-height: 25px/$ppr;
           & .icon_f{
             display: block;
-            margin-top: .5rem;
-            font-size: .7rem;
+            margin-top: 5px/$ppr;
+            font-size: 1.6rem;
           }
         }
       }
       .flex-2{
         flex: 2;
         width: 100%;
+        height: 100%;
         .join,.buy{
           width: 50%;
+          height: 100%;
           float: left;
           text-align: center;
-          font-size: .68rem;
+          font-size: 1.4rem;
           color: #fff;
           & a{
             color: #fff;

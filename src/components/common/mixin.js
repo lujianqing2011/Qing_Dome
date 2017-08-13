@@ -11,8 +11,10 @@ export const loadMore = {
                 let oldScrollTop;
                 let scrollEl;
                 let heightEl;
+                let htmlFontSize = parseInt(getComputedStyle(window.document.documentElement)['font-size'])*4.5;
                 let scrollType = el.attributes.type && el.attributes.type.value;
                 let scrollReduce = 2;
+                console.log(htmlFontSize)
                 if (scrollType == 2) {
                     scrollEl = el;
                     heightEl = el.children[0];
@@ -54,7 +56,7 @@ export const loadMore = {
                 }
 
                 const loadMore = () => {
-                    if (scrollEl.scrollTop + windowHeight >= height + setTop + 63.5 - scrollReduce) {
+                    if (scrollEl.scrollTop + windowHeight >= height + setTop + htmlFontSize - scrollReduce) {
                         binding.value();
                     }
                 }

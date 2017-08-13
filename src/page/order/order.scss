@@ -1,37 +1,40 @@
-.load{
-  width: 6rem;
-  height: 6rem;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 99;
-  border-radius: 5rem;
-  box-shadow: 1px 1px 6px #D4D4D4;
-  overflow: hidden
-  & img{
-    position: relative;
-    left: -63px;
-    top: -15px;
-    right: 0;
-    bottom: 0;
-    width: 205px;
-    margin: auto;
-  }
-}
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
+// .load{
+//   width: 6rem;
+//   height: 6rem;
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   z-index: 99;
+//   border-radius: 5rem;
+//   box-shadow: 1px 1px 6px #D4D4D4;
+//   overflow: hidden
+//   & img{
+//     position: relative;
+//     left: -63px;
+//     top: -15px;
+//     right: 0;
+//     bottom: 0;
+//     width: 205px;
+//     margin: auto;
+//   }
+// }
 .pages-title{
   background: #fff;
   .title{
     display: flex;
     & li{
       flex: 1;
-      height: 2rem;
-      line-height: 2rem;
+      height: 48px/$ppr;
+      line-height: 48px/$ppr;
       text-align: center;
       border-bottom: 1px solid #eee;
-      font-size: .6rem;
+      font-size: 1.4rem;
       &.router-link-exact-active,.router-link-active{
         border-color: red;
       }
@@ -43,14 +46,14 @@
   .order-null{
     background: #fff;
     .null-pic{
-      padding: 5rem 5rem 4rem 5rem;
+      padding: 100px/$ppr 100px/$ppr 80px/$ppr;
       background: url('../../assets/icon-no.png') no-repeat center center;
       background-size: 50%;
     }
     & p{
       text-align: center;
-      margin-bottom: .4rem;
-      font-size: .6rem;
+      margin-bottom: 4px/$ppr;
+      font-size: 1.2rem;
       color: #656565;
       &.sub-txt{
         color: #bfbfbf;
@@ -58,12 +61,12 @@
       &.null-bt{
         .bt-a{
           display: inline-block;
-          height: 1.5rem;
-          line-height: 1.5rem;
-          padding: 0rem .8rem;
+          height: 34px/$ppr;
+          line-height: 34px/$ppr;
+          padding: 0rem 24px/$ppr;
           border-radius: 20rem;
           color: #fff;
-          font-size: .64rem;
+          font-size: 1.2rem;
           background: #fe4070;
         }
       }
@@ -74,17 +77,17 @@
     overflow: hidden;
     background-color: #f2f2f2;
     .acart-goods{
-      margin-bottom: .4rem;
+      margin-bottom: 5px/$ppr;
       background-color: #fff;
       .goods_state{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 .5rem;
-        height: 2rem;
-        line-height: 2rem;
+        padding: 0 10px/$ppr;
+        height: 45px/$ppr;
+        line-height: 45px/$ppr;
         background: white;
-        font-size: .64rem;
+        font-size: 1.2rem;
         & span {
           display: inline-block;
         }
@@ -94,47 +97,48 @@
           background: #F9F9F9;
           position: relative;
           border-top: 1px solid #e8e8e8;
-          padding: .4rem .5rem;
+          padding: 10px/$ppr;
         }
         .cart-box{
           display: flex;
           .left{
-            width: 4.2rem;
-            height: 4.2rem;
+            width: 100px/$ppr;
+            height: 100px/$ppr;
             background: #eee;
+            border-radius: 4px;
+            overflow: hidden; 
             & img{
               width: 100%;
             }
           }
           .center{
             flex: 2;
-            margin-left: .25rem;
+            margin-left: 10px/$ppr;
             & h2{
-              height: 2rem;
-              line-height: 1rem;
+              height: 48px/$ppr;
+              line-height: 24px/$ppr;
               overflow: hidden;
               text-overflow: ellipsis;
               -webkit-line-clamp: 2;
               word-break: break-word;
               display: -webkit-box;
               -webkit-box-orient: vertical;
-              font-size: .58rem;
+              font-size: 1.2rem;
             }
             .standard{
-              margin: .1rem 0;
+              line-height: 24px/$ppr;
               & span{
                 color: #b1b1b1;
-                font-size: .55rem;
-                margin-right: .25rem;
+                font-size: 1.2rem;
+                margin-right: 5px/$ppr;
               }
             }
           }
           .right{
             flex: 1;
             text-align: right;
-            width: 5rem;
-            font-size: .6rem;
-            line-height: 1rem;
+            font-size: 1.2rem;
+            line-height: 24px/$ppr;
             .raw-cost{
               text-decoration: line-through;
               color: #888
@@ -146,6 +150,22 @@
           }
         }
       }
+      .total-price{
+        background: #fff;
+        height: 42px/$ppr;
+        line-height: 42px/$ppr;
+        text-align: right;
+        padding-right: .5rem;
+        font-size: 0;
+        & span{
+          display: inline-block;
+          margin-left: 10px/$ppr;
+          font-size: 1.2rem;
+        }
+        & b{
+          font-weight: 700;
+        }
+      }
       .tab-btn{
         background: #fff;
         line-height: 0;
@@ -153,36 +173,22 @@
         border: 1px solid #e8e8e8;
         border-left: 0;
         border-right: 0;
-        padding: .3rem .5rem;
+        padding: 6px/$ppr 10px/$ppr;
+        font-size: 0;
         & a{
           display: inline-block;
           border: 1px solid #999;
-          padding: .1rem .5rem;
+          padding: 8px/$ppr 10px/$ppr;
           height: 1.2rem;
           line-height: 1.2rem;
           border-radius: .2rem;
           color: black;
-          font-size: .6rem;
+          font-size: 1.2rem;
+          margin-left: 5px/$ppr;
           &.bt-red{
             border-color: red;
             color: red;
           }
-        }
-      }
-      .total-price{
-        background: #fff;
-        height: 1.7rem;
-        line-height: 1.7rem;
-        text-align: right;
-        padding-right: .5rem;
-        font-size: 0;
-        & span{
-          display: inline-block;
-          margin-left: .5rem;
-          font-size: .6rem;
-        }
-        & b{
-          font-weight: 700;
         }
       }
     }

@@ -126,6 +126,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .fordet-page{
   background: #f2f2f2;
   .rest-form{
@@ -134,7 +136,7 @@ export default{
       display: flex;
       background: white;
       border-bottom: 1px solid #ececec;
-      padding: 1.4rem 1.8rem;
+      padding: 15px/$ppr 10px/$ppr;
       box-sizing: border-box;
       justify-content: space-between;
       align-items: center;
@@ -142,36 +144,38 @@ export default{
         background-color: #4cd964;
       }
       &.input-in{
-        padding: 0.7rem 1.8rem;
+        padding: 10px/$ppr;
       }
       & input{
-        font-size: 1.8rem;
+        height: 24px/$ppr;
+        line-height: 24px/$ppr;
+        font-size: 1.4rem;
         font-family: Helvetica Neue,Tahoma,Arial;
         flex: 1;
       }
       .delete_content{
-        width: 1.8rem;
-        height: 1.8rem;
-        line-height: 1.8rem;
+        width: 24px/$ppr;
+        height: 24px/$ppr;
+        line-height: 24px/$ppr;
         text-align: center;
         background: #ccc;
         font-size: 2rem;
         border-radius: 50%;
         color: white;
-        margin: 0 .5rem;
+        margin: 0 5px/$ppr;
       }
       & button{
-        padding: .7rem 1rem;
+        padding: 6px/$ppr 10px/$ppr;
         border: none;
         color: white;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         border-radius: 4px;
         outline: none;
         font-family: Helvetica Neue,Tahoma,Arial;
       }
       .box_captcha{
         position: relative;
-        width: 150px;
+        width: 150px/$ppr;
         .captcha_content{
           position: absolute;
           top: 0;
@@ -182,17 +186,17 @@ export default{
           align-items: center;
           flex-wrap: wrap;
           .captcha_img{
-            margin-right: .4rem;
-            width: 7rem;
-            height: 2.8rem;
+            margin-right: 10px/$ppr;
+            width: 80px/$ppr;
+            height: 35px/$ppr;
           }
           .captcha_click{
             display: flex;
-            width: 4rem;
+            width: 45px/$ppr;
             flex-wrap: wrap;
             justify-content: center;
             & p{
-              line-height: 1.8rem;
+              line-height: 20px/$ppr;
               font-size: 1.2rem;
               &.on{
                 color: blue;
@@ -203,15 +207,15 @@ export default{
       }
     }
     .form_button{
-      padding: 0 1.8rem;
+      padding: 0 10px/$ppr;
       & button{
         background: #4cd964;
         color: white;
         width: 100%;
-        height: 4.2rem;
+        height: 48px/$ppr;
         border-radius: 4px;
-        font-size: 2rem;
-        margin: 2rem 0;
+        font-size: 1.4rem;
+        margin: 25px/$ppr 0;
       }
     }
   }

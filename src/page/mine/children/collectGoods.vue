@@ -16,7 +16,6 @@
               </div>
               <div class="div_d right">
                 <a href="#">删除</a>
-                <a href="#">看相似</a>
               </div>
             </div>
           </div>
@@ -34,7 +33,6 @@
               </div>
               <div class="div_d right">
                 <a href="#">删除</a>
-                <a href="#">看相似</a>
               </div>
             </div>
           </div>
@@ -58,6 +56,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .collect_goods_page{
   position: absolute;
   top: 0;
@@ -73,27 +73,27 @@ export default{
       .goods_items{
         position: relative;
         display: flex;
-        padding: .5rem;
+        padding: 10px/$ppr;
         border-bottom: 1px solid #eaeaea;
         .goods_wrap{
           display: inline-block;
           .p_img{
-            width: 4rem;
-            height: 4rem;
+            width: 100px/$ppr;
+            height: 100px/$ppr;
           }
         }
         .goods_info{
           width: 100%;
-          padding-left: .4rem;
+          padding-left: 10px/$ppr;
           box-sizing: border-box;
           flex: 1;
           .a_items{
             display: block;
             .goods_name{
               width: 100%;
-              height: 1.8rem;
-              line-height: .9rem;
-              font-size: .6rem;
+              height: 48px/$ppr;
+              line-height: 24px/$ppr;
+              font-size: 1.2rem;
               color: black;
               display: -webkit-box;
               -webkit-box-orient: vertical;
@@ -106,15 +106,14 @@ export default{
           .div_detail{
             display: flex;
             align-items: center;
-            margin-top: .25rem;
+            margin-top: 2px/$ppr;
             .div_d{
               flex: 1;
-              width: 4.5rem;
               &.left{
                 text-align: left;
                 & p{
-                  font-size: .6rem;
-                  line-height: .8rem;
+                  font-size: 1.2rem;
+                  line-height: 24px/$ppr;
                   color: red;
                 }
               }
@@ -122,12 +121,13 @@ export default{
                 text-align: right;
                 & a{
                   display: inline-block;
-                  height: 1.2rem;
-                  line-height: 1.2rem;
+                  height: 28px/$ppr;
+                  line-height: 28px/$ppr;
                   border: 1px solid #ccc;
-                  padding: 0 0.4rem;
-                  font-size: .6rem;
+                  padding: 0 14px/$ppr;
+                  font-size: 1.2rem;
                   border-radius: 2px;
+                  border-radius: 20rem;
                 }
               }
             }

@@ -50,7 +50,7 @@
             </div>
             <div class="price">
               <div class="price_j">{{totalMoney}}</div>
-              <div class="freight">另需配送费¥{{goods_freight}}</div>
+              <div class="freight">快递费¥{{goods_freight}}</div>
             </div>
           </div>
           <div class="orders_bt">

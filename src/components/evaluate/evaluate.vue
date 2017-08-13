@@ -114,15 +114,17 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .evaluate {
 
   .evaluate-type {
-    padding: 0rem .5rem;
+    padding: 0rem 10px/$ppr;
     & .type-bt {
       display: inline-block;
-      padding: .5rem;
+      padding: 5px/$ppr 10px/$ppr;
       color: white;
-      font-size: .6rem;
+      font-size: 1.2rem;
       &.all {
         background: #427CFD;
         &.on {
@@ -145,66 +147,63 @@ export default{
   }
   .switch {
     font-size: 0;
-    padding: 1rem 0;
     border-bottom: 1px solid #ececec;
-    padding: .5rem;
+    padding: 15px/$ppr 10px/$ppr;
     .screen-icon {
       display: inline-block;
-      width: 1rem;
-      height: 1rem;
-      line-height: 1rem;
+      width: 25px/$ppr;
+      height: 25px/$ppr;
+      line-height: 25px/$ppr;
       text-align: center;
       border-radius: 50%;
-      font-size: .6rem;
+      font-size: 1.2rem;
       color: white;
       background: #a0a0a0;
-      margin-right: .25rem;
+      margin-right: 10px/$ppr;
       &.on {
         background: #36CA56;
       }
     }
     .switch-screen {
       display: inline-block;
-      height: 1.5rem;
-      line-height: 1.5rem;
-      font-size: .6rem;
+      line-height: 25px/$ppr;
+      font-size: 1.4rem;
     }
   }
   .content {
-    padding: .5rem;
+    padding: 10px/$ppr;
     .content-li {
-      padding: .6rem 0 .6rem 0;
+      padding: 10px/$ppr 0;
       border-bottom: 1px solid #eee;
       &:last-child {
         border-bottom: none;
       }
       .user-message {
-        height: 1.5rem;
+        height: 30px/$ppr;
+        line-height: 30px/$ppr;
         font-size: 0;
         & img {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 30px/$ppr;
+          height: 30px/$ppr;
           border-radius: 50%;
           display: inline-block;
         }
         & .user-name {
           display: inline-block;
-          font-size: .6rem;
-          line-height: 1.5rem;
+          font-size: 1.4rem;
           vertical-align: top;
           margin-left: .6rem;
         }
         & .user-time {
           display: inline-block;
           float: right;
-          line-height: 1.5rem;
-          font-size: .6rem;
+          font-size: 1.2rem;
         }
       }
       .user-evaluate {
-        padding: .25rem .25rem .25rem 0rem;
-        line-height: 1.2rem;
-        font-size: .6rem;
+        padding: 10px/$ppr 0;
+        line-height: 24px/$ppr;
+        font-size: 1.4rem;
       }
       .user-img {
         padding-left: .15rem;

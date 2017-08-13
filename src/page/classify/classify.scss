@@ -1,9 +1,12 @@
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .page-classify{
   .classify{
     display: flex;
     width: 100%;
     position: absolute;
-    top: 2.2rem;
+    top: 54px/$ppr;
     bottom: 0rem;
     z-index: 100;
     .page-star{
@@ -14,17 +17,17 @@
       background: red;
     }
     .left{
-      flex: 0 0 4rem;
-      width: 4rem;
+      flex: 0 0 100px/$ppr;
+      width: 100px/$ppr;
       background: #eee;
       overflow: hidden;
       .left-li{
         & li{
           padding: .5rem;
-          height: 1.4rem;
-          line-height: 1.4rem;
+          height: 35px/$ppr;
+          line-height: 35px/$ppr;
           text-align: center;
-          font-size: .6rem;
+          font-size: 1.2rem;
           border-bottom: 1px solid #e1e1e1;
           &:last-child{
             border-bottom: 0;
@@ -43,34 +46,34 @@
       .right-list{
         width: 100%;
         .h2-title{
-          height: 2rem;
-          line-height: 2rem;
+          height: 40px/$ppr;
+          line-height: 40px/$ppr;
           padding: 0 .5rem;
           background: #eee;
-          border-left: .15rem solid #9898ff;
+          border-left: 4px solid #9898ff;
           font-weight: 700;
-          font-size: .6rem;
+          font-size: 1.4rem;
         }
         & ul{
           & li{
-            margin-top: .25rem;
+            margin-top: 5px/$ppr;
             display: flex;
             .img{
-              flex: 0 0 5rem;
-              width: 5rem;
-              height: 5rem;
+              flex: 0 0 100px/$ppr;
+              width: 100px/$ppr;
+              height: 100px/$ppr;
               background: red;
             }
             .content{
               flex: 1;
               background: black;
-              padding: 0 .25rem;
+              padding: 0 5px/$ppr;
               color: white;
-              font-size: .7rem;
+              font-size: 1.2rem;
               & h2{
-                font-size: .6rem;
-                height: 2.4rem;
-                line-height: 1.2rem;
+                font-size: 1.2rem;
+                height: 48px/$ppr;
+                line-height: 24px/$ppr;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 display: -webkit-box;
@@ -79,13 +82,11 @@
                 word-break: break-all;
               }
               & .describe{
-                line-height: 1.2rem;
-                font-size: .6rem;
+                line-height: 24px/$ppr;
               }
               & .price{
-                height: 1.2rem;
-                line-height: 1.2rem;
-                font-size: .6rem;
+                height: 24px/$ppr;
+                line-height: 24px/$ppr;
                 color: red;
               }
             }

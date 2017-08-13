@@ -1,8 +1,19 @@
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .app-index{
   width: 100%;
   background: #eee;
-  overflow-y: hidden;
+  .mod_container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #eee;
+  }
   .dzdt{
     background-color: white;
     & > a{
@@ -14,7 +25,7 @@
   }
   .layout-type{
     background: #fff;
-    padding: .5rem;
+    padding: 10px/$ppr;
     .mui-flex{
       display: flex;
       & > li{
@@ -27,14 +38,14 @@
           display: block;
           text-align: center;
           color: #000;
-          font-size: .6rem;
+          font-size: 1.2rem;
           white-space: nowrap;
-          margin: .4rem;
+          margin: 10px/$ppr;
           overflow: hidden;
           & img{
-            width: 2.2rem;
+            width: 100%;
             display: block;
-            margin: 0 auto .5rem;
+            margin: 0 auto 10%;
           }
         }
       }
@@ -83,35 +94,58 @@
   }
   .title_h2{
     display: flex;
-    height: 2rem;
-    line-height: 2rem;
+    height: 42px/$ppr;
+    line-height: 42px/$ppr;
     background-color: #fff;
+    padding: 0 10px/$ppr;
     position: relative;
     .title{
-      flex: 0 0 5rem;
-      font-size: .68rem;
+      font-size: 1.4rem;
       padding-left: .25rem;
       font-weight: 700;
     }
+    .time_countdown{
+      flex: 2;
+      & .time {
+        color: #000;
+        font-size: 0;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        .alike{
+          font-size: 1.2rem;
+          border: 1px solid #ececec;
+          border-radius: 2px;
+          padding: 2px/$ppr;
+          color: #000;
+        }
+        .alike-b {
+          font-size: 1.2rem;
+          margin: 0 5px/$ppr;
+        }
+      }
+    }
     .more{
       flex: 1;
-      padding: 0;
       color: red;
-      font-size: .6rem;
+      font-size: 1.2rem;
       font-weight: 600;
       font-family: Microsoft Yahei,Helvetica,Arial;
       text-align: right;
-      margin-right: 1rem;
-    }
-    .title_more_icon{
-      position: absolute;
-      display: inline-block;
-      width: .6rem;
-      height: .6rem;
-      right: .25rem;
-      top: .64rem;
-      background: url('../../assets/index/more-arrow.png') no-repeat center center;
-      background-size: .6rem;
+      padding-right: 18px/$ppr;
+      position: relative;
+      &:after{
+        content: ' ';
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+        width: 14px/$ppr;
+        height: 14px/$ppr;
+        background: url('../../assets/index/more-arrow.png') no-repeat center center;
+        background-size: cover;
+      }
     }
   }
   .seckill-goods{
@@ -122,9 +156,9 @@
     .pic-list{
       font-size: 0;
       .pic-item{
-        width: 6.5rem;
+        width: 144px/$ppr;
         display: inline-block;
-        margin-right: .25rem;
+        margin-right: 6px/$ppr;
         &:last-child{
           margin-right: 0;
         }
@@ -134,41 +168,15 @@
       }
     }
   }
-.imgs_block{
-    overflow: hidden;
-    .block{
-      & a{
-        display: block;
-      }
-      & img{
-        width: 100%;
-      }
-    }
-  }
   .module{
     width: 100%;
     background-color: #fff;
     position: relative;
     .seckill_time {
       position: relative;
-      & .time {
-        padding: 1.5rem 1rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #FF6252;
-        font-size: 1.2rem;
-        transform: translate(-50%,-50%);
-        background-color: rgba(255, 255, 255, 0.9);
-        .alike {
-          
-        }
-        .alike-b {
-          margin: 0 .25rem;
-        }
+      & img{
+        width: 100%;
+        display: block;
       }
     }
   }

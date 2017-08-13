@@ -72,6 +72,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
   transition: all .3s;
 }
@@ -98,43 +100,43 @@ export default{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: .75rem .5rem;
+        padding: 12px/$ppr 10px/$ppr;
         background: white;
         .icon_select{
-          width: 1rem;
-          height: 1rem;
+          width: 25px/$ppr;
+          height: 25px/$ppr;
           display: inline-block;
           background: url('../../../assets/icon-meixuanze.png') no-repeat left center;
-          background-size: 1rem;
-          margin-right: .5rem;
+          background-size: 25px/$ppr;
+          margin-right: 10px/$ppr;
           &.on{
             background: url('../../../assets/icon-xuanze.png') no-repeat left center;
-            background-size: 1rem;
+            background-size: 25px/$ppr;
           }
         }
         .address{
-          line-height: .9rem;
+          line-height: 24px/$ppr;
           & span{
             display: inline-block;
-            font-size: .6rem;
-            margin-right: .25rem;
+            font-size: 1.2rem;
+            margin-right: 5px/$ppr;
             &.name{
-              font-size: .8rem;
+              font-size: 1.4rem;
               font-weight: 700;
             }
           }
           .address_detail{
-            font-size: .6rem;
+            font-size: 1.4rem;
           }
         }
       }
     }
     .add_address{
       width: 96%;
-      height: 2rem;
-      line-height: 2rem;
+      height: 42px/$ppr;
+      line-height: 42px/$ppr;
       text-align: center;
-      font-size: .7rem;
+      font-size: 1.4rem;
       background: #35D800;
       color: white;
       border-radius: 4px;

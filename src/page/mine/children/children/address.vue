@@ -109,6 +109,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
 }
@@ -128,9 +130,9 @@ export default{
   .address-box{
     .address-ul{
       .address-odd{
-        padding: .4rem .4rem 0 .4rem;
+        padding: 10px/$ppr 10px/$ppr 0;
         .address{
-          padding: .75rem .75rem 0.25rem .75rem;
+          padding: 10px/$ppr 10px/$ppr 5px/$ppr;
           background-color: white;
           border-radius: 4px;
           box-shadow: 1px 1px 5px #e0e0e0;
@@ -138,55 +140,55 @@ export default{
             font-size: 0;
             & span{
               display: inline-block;
-              font-size: .7rem;
+              font-size: 1.2rem;
             }
             .name{
               float: left;
-              font-size: .7rem;
+              font-size: 1.4rem;
               font-weight: 700;
             }
             .tel{
               float: right;
-              font-size: .68rem;
+              font-size: 1.2rem;
             }
             .detail{
               display: block;
-              padding: .4rem 0;
+              padding: 6px/$ppr 0;
               clear: both;
-              font-size: .7rem;
+              font-size: 1.2rem;
               & em{
                 display: block;
-                line-height: .9rem;
-                font-size: .6rem;
+                line-height: 24px/$ppr;
+                font-size: 1.2rem;
               }
             }
           }
           & dl.set_redact {
             width: 100%;
             border-top: 1px solid #ececec;
-            height: 2rem;
-            line-height: 2rem;
-            font-size: .7rem;
+            height: 40px/$ppr;
+            line-height: 40px/$ppr;
+            font-size: 1.2rem;
             & dt{
               float: left;
               width: 55%;
-              font-size: .65rem;
+              font-size: 1.2rem;
               box-sizing: border-box;
-              padding-left: 1.4rem;
+              padding-left: 32px/$ppr;
               background: url('../../../../assets/icon-meixuanze.png') no-repeat left center;
-              background-size: 1rem;
+              background-size: 25px/$ppr;
               &.on{
                 background: url('../../../../assets/icon-xuanze.png') no-repeat left center;
-                background-size: 1rem;
+                background-size: 25px/$ppr;
               }
             }
             & dd{
               float: right;
               text-align: right;
-              font-size: .65rem;
+              font-size: 1.2rem;
               width: 45%;
               & a{
-                padding-left: .75rem;
+                padding-left: 10px/$ppr;
               }
             }
           }
@@ -194,7 +196,7 @@ export default{
       }
     }
     .null-box{
-      height: 3rem;
+      height: 75px/$ppr;
       width: 100%;
     }
   }
@@ -203,12 +205,12 @@ export default{
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: .5rem;
+    padding: 10px/$ppr;
     background: white;
     & p{
-      height: 2rem;
-      line-height: 2rem;
-      font-size: .8rem;
+      height: 48px/$ppr;
+      line-height: 48px/$ppr;
+      font-size: 1.4rem;
       text-align: center;
       background: red;
       border-radius: 4px;

@@ -323,6 +323,8 @@ export default {
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .swiper_detail{
   position: relative;
   & .swiper-wrapper{
@@ -336,7 +338,7 @@ export default {
 .swiper-pagination{
   &.detail_title{
     top:0;
-    height: 2rem;
+    height: 48px/$ppr;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -351,9 +353,9 @@ export default {
       height: 100% !important;
       margin:0 !important;
       text-align: center;
-      line-height: 2rem;
+      line-height: 48px/$ppr;
       color: #000;
-      font-size: .6rem;
+      font-size: 1.2rem;
       border-radius: 0 !important;
       background: #fff !important;
       opacity: 1 !important;
@@ -361,7 +363,7 @@ export default {
     .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
       color: #FF3B84;
       background: #03a9f4;
-      font-size: .68rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -388,8 +390,8 @@ export default {
   & label[name="radio"]{
     display: inline-block;
     background: #eaeaea;
-    padding: .5rem;
-    font-size: .6rem;
+    padding: 6px/$ppr 10px/$ppr;
+    font-size: 1.2rem;
     margin: .25rem .5rem .25rem 0;
     color: white;
     border-radius: 4px;

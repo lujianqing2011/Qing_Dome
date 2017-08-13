@@ -16,22 +16,24 @@
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .state_box{
   width: 100%;
   .state_h2{
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 48px/$ppr;
+    line-height: 48px/$ppr;
     text-align: center;
-    font-size: .8rem;
+    font-size: 1.4rem;
     font-weight: 700;
   }
   .state_content{
     padding: 1rem;
     .c_part{
-      text-indent: 2.5rem;
-      line-height: 1rem;
-      font-size: .64rem;
-      margin-bottom: .8rem;
+      text-indent: 22px/$ppr;
+      line-height: 28px/$ppr;
+      font-size: 1.4rem;
+      margin-bottom: 10px/$ppr;
     }
   }
 }

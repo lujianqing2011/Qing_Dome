@@ -37,6 +37,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
   transition: all .3s;
 }
@@ -58,24 +60,25 @@ export default{
     width: 100%;
     background: #FF3B84;
     box-sizing: border-box;
-    padding: .2rem .4rem .5rem .4rem;
+    padding: 5px/$ppr 10px/$ppr 10px/$ppr;
     .gold-content{
       background: white;
       border-radius: 4px;
-      padding: .5rem;
+      padding: 10px/$ppr;
       .content-head{
-        height: 1rem;
-        line-height: 1rem;
-        font-size: .64rem;
+        height: 30px/$ppr;
+        line-height: 30px/$ppr;
+        font-size: 1.2rem;
         .left{
           float: left;
+          font-size: 1.2rem;
           color: #a0a0a0;
         }
         .right{
           float: right;
           background: url('../../../assets/mine/bangzu.png') no-repeat left center;
           background-size: 24%;
-          padding-left: 1rem;
+          padding-left: 22px/$ppr;
           & a{
             color: #FF3B84;
           }
@@ -83,32 +86,32 @@ export default{
       }
     }
     .content-usable{
-      font-size: 2rem;
-      padding: .5rem 0;
+      font-size: 4rem;
+      padding: 15px/$ppr 0;
       text-align: center;
     }
     .content-button{
-      margin-top: 1rem;
+      margin-top: 20px/$ppr;
       & button{
         width: 100%;
-        background: #ccc;
-        font-size: .8rem;
-        height: 2.2rem;
-        line-height: 2.2rem;
+        flex: 1;
+        font-size: 1.4rem;
+        height: 50px/$ppr;
+        line-height: 50px/$ppr;
         border-radius: 4px;
         color: white;
       }
     }
   }
   .content-h2{
-    padding: .75rem .5rem;
-    font-size: .64rem;
+    padding: 15px/$ppr 10px/$ppr;
+    font-size: 1.4rem;
     color: #a0a0a0;
   }
   .content-detail{
-    padding: 0 .5rem .5rem .5rem;
+    padding: 0 10px/$ppr 10px/$ppr 10px/$ppr;
     .detail-box{
-      height: 7.5rem;
+      height: 200px/$ppr;
       background: white;
     }
   }

@@ -49,6 +49,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .add_address_page{
   position: fixed;
   top: 0;
@@ -62,29 +64,29 @@ export default{
       display: flex;
       justofy-content: flex-start;
       align-items: center;
-      line-height: 2.4rem;
+      line-height: 50px/$ppr;
       border-bottom: 1px solid #eaeaea;
-      padding: 0 .5rem;
+      padding: 0 10px/$ppr;
       .list_name{
-        font-size: .68rem;
+        font-size: 1.4rem;
       }
       .list_fill{
         flex: 1;
-        padding: 0 .5rem;
-        font-size: .65rem;
+        padding: 0 10px/$ppr;
+        font-size: 1.4rem;
       }
     }
   }
   .add_address_button{
     width: 96%;
-    height: 2rem;
-    line-height: 2rem;
+    height: 48px/$ppr;
+    line-height: 48px/$ppr;
     text-align: center;
     background: red;
     margin: 0 auto;
-    font-size: .7rem;
+    font-size: 1.4rem;
     border-radius: 4px;
-    margin-top: 1rem;
+    margin-top: 15px/$ppr;
     color: white;
   }
 }

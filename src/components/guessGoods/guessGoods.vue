@@ -127,22 +127,24 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .goods-page{
   width: 100%;
   margin-top: .25rem;
   .title-h2{
-    line-height: 2rem;
-    font-size: .7rem;
+    line-height: 42px/$ppr;
+    font-size: 1.4rem;
     font-weight: bold;
     background-color: white;
-    margin-bottom: .5px;
+    margin-bottom: 4px/$ppr;
     border-bottom: 1px solid #ECECEC;
     text-align: center;
   }
   .box-li{
     float: left;
     width: 49.33%;
-    margin-bottom: .2rem;
+    margin-bottom: 4px/$ppr;
     &:nth-of-type(2n){
       float: right;
     }
@@ -158,12 +160,11 @@ export default{
         left: 0;
       }
     }
-
     .box{
-      padding: .25rem .4rem;
+      padding: 5px/$ppr;
       background: white;
       & h3{
-        font-size: .56rem;
+        font-size: 1.2rem;
         line-height: 1.2rem;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -171,20 +172,20 @@ export default{
       }
       & del{
         display: block;
-        font-size: .56rem;
-        line-height: 1rem;
+        font-size: 1.2rem;
+        line-height: 24px/$ppr;
       }
       & p{
-        line-height: 1.2rem;
+        line-height: 24px/$ppr;
         & b{
           color: red;
-          font-size: .72rem;
+          font-size: 1.4rem;
           float: left;
           font-weight: bold;
         }
         & span{
           float: right;
-          font-size: .56rem;
+          font-size: 1.2rem;
         }
       }
     }

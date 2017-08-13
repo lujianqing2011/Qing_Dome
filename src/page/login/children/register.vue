@@ -1,7 +1,7 @@
 <template>
 
 <div class="login_page">
-  <header-top header-title="注册" goBack="true" header-nav="true"></header-top>
+  <header-top header-title="注册" goBack="true"></header-top>
   <form>
     <section class="login_content">
       <section class="box_div">
@@ -108,6 +108,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .login_page{
   position: absolute;
   top: 0;
@@ -121,33 +123,35 @@ export default{
       display: flex;
       background: white;
       border-bottom: 1px solid #ececec;
-      padding: .7rem .9rem;
+      padding: 15px/$ppr 10px/$ppr;
       box-sizing: border-box;
       justify-content: space-between;
       align-items: center;
       & input{
-        font-size: .9rem;
+        height: 24px/$ppr;
+        line-height: 24px/$ppr;
+        font-size: 1.4rem;
         font-family: Helvetica Neue,Tahoma,Arial;
         flex: 1;
       }
       .delete_content{
-        width: .9rem;
-        height: .9rem;
-        line-height: .9rem;
+        width: 24px/$ppr;
+        height: 24px/$ppr;
+        line-height: 24px/$ppr;
         text-align: center;
         background: #ccc;
-        font-size: 1rem;
+        font-size: 2rem;
         border-radius: 50%;
         color: white;
-        margin: 0 .25rem;
+        margin: 0 5px/$ppr;
       }
       .button_switch{
         display: flex;
         justify-content: center;
         background: #ccc;
         border-radius: 10px;
-        width: 2.3rem;
-        height: .75rem;
+        width: 55px/$ppr;
+        height: 20px/$ppr;
         position: relative;
         top: 0;
         bottom: 0;
@@ -157,31 +161,34 @@ export default{
         }
         & span{
           display: inline-block;
-          line-height: .75rem;
-          padding: 0 0.3rem;
+          line-height: 20px/$ppr;
+          padding: 0 4px/$ppr;
+          font-size: 1rem;
           color: white;
-          font-size: .6rem;
         }
         .slide_bt{
-          width: 1.4rem;
-          height: 1.4rem;
+          width: 35px/$ppr;
+          height: 35px/$ppr;
+          line-height: 35px/$ppr;
           background: #e2e2e2;
           border-radius: 50%;
           position: absolute;
-          top: 0rem;
-          bottom: 0rem;
-          left: 0rem;
+          top: 0;
+          bottom: 0;
+          left: 0;
           margin: auto 0;
           transition: all 0.2s ease-in;
+          box-shadow: 0 2px 5px 0 #d0d0d0;
           overflow: hidden;
           &.trans_right{
-            transform: translateX(.9rem);
+            transform: translateX(22px/$ppr);
+            background: #59EF72;
           }
         }
       }
       .box_captcha{
         position: relative;
-        width: 7.5rem;
+        width: 150px/$ppr;
         .captcha_content{
           position: absolute;
           top: 0;
@@ -193,18 +200,18 @@ export default{
           flex-wrap: wrap;
           flex-wrap: nowrap;
           .captcha_img{
-            margin-right: .4rem;
-            width: 3.5rem;
-            height: 1.4rem;
+            margin-right: 10px/$ppr;
+            width: 80px/$ppr;
+            height: 35px/$ppr;
           }
           .captcha_click{
             display: flex;
-            width: 2rem;
+            width: 45px/$ppr;
             flex-wrap: wrap;
             justify-content: center;
             & p{
-              line-height: .9rem;
-              font-size: .6rem;
+              line-height: 20px/$ppr;
+              font-size: 1.2rem;
               &.on{
                 color: blue;
               }
@@ -215,15 +222,15 @@ export default{
     }
   }
   .form_button{
-    padding: 0 .9rem;
+    padding: 0 10px/$ppr;
     & button{
       background: #4cd964;
       color: white;
       width: 100%;
-      height: 2.1rem;
+      height: 48px/$ppr;
       border-radius: 4px;
-      font-size: 1rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 20px/$ppr;
     }
   }
 }

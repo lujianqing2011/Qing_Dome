@@ -60,33 +60,34 @@ export default{
 </script>
 
 <style lang="scss">
- 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
 #header-top{
   .header{
     display: flex;
     background: #FF3B84;
-    height: 2.25rem;
-    line-height: 2.25rem;
+    height: 54px/$ppr;
+    line-height: 54px/$ppr;
     text-align: center;
     position: relative;
     z-index: 10;
     .header-left,.header-right{
-      flex: 0 0 2.25rem;
-      font-size: .65rem;
+      height: 100%;
+      flex: 0 0 54px/$ppr;
+      font-size: 1.4rem;
       color: white;
       cursor: pointer;
     }
     .header-left{
       .goBack{
         width: 100%;
-        height: 2.25rem;
-        background: url('./left.png') no-repeat 0.55rem center;
+        height: 100%;
+        background: url('./left.png') no-repeat 10px/$ppr center;
         background-size: 40%;
       }
     }
     .header-right{
       .headerNav{
-        height: 2.25rem;
+        height: 100%;
         background: url('./more.png') no-repeat center center;
         background-size: 50%;
         transition: all 0.5s;
@@ -113,6 +114,7 @@ export default{
       }
     }
     .header-title{
+      height: 100%;
       color: white;
       flex: 1;
       .title{
@@ -120,8 +122,7 @@ export default{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: .8rem;
-        font-family: "Microsoft Yahei";
+        font-size: 1.6rem;
         font-weight: 700;
       }
     }
@@ -130,12 +131,12 @@ export default{
     display: flex;
     background: #3a3a3a;
     height: 0em;
-    line-height: .8rem;
-    font-size: .56rem;
+    line-height: 22px/$ppr;
+    font-size: 1.2rem;
     transition: all 0.3s;
     overflow: hidden;
     &.show_nav{
-      height: 2.5rem;
+      height: 54px/$ppr;
     }
     .nav-div{
       flex: 1;
@@ -144,9 +145,9 @@ export default{
       font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
       .nav_icon{
         display: block;
-        margin-top: .45rem;
-        margin-bottom: .1rem;
-        font-size: .9rem;
+        margin-top: 5px/$ppr;
+        margin-bottom: 1px/$ppr;
+        font-size: 1.8rem;
       }
       &:active{
         background: rgb(68, 68, 68);

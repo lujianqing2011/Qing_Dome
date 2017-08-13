@@ -85,7 +85,7 @@
       </div>
     </section>
 
-    <div style="height: 2.5rem; width: 100%;"></div>
+    <div class="null_div"></div>
   </section>
 
   <section class="order_pay_button">
@@ -181,6 +181,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
 }
@@ -218,87 +220,85 @@ export default{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0rem .5rem;
+      padding: 0rem 10px/$ppr;
       background-size: .5rem;
       background: url('../../assets/confirmOrder/borderBg.png') repeat-x left bottom;
-      background-size: 3rem .15rem;
+      background-size: 55px/$ppr 4px/$ppr;
       background-color: white;
-      min-height: 4rem;
+      min-height: 100px/$ppr;
       .address_detail_container{
         display: flex;
         align-items: center;
         .c_icon{
           display: block;
-          margin-right: .25rem;
-          font-size: 1rem;
+          margin-right: 5px/$ppr;
+          font-size: 2rem;
           color: #FF3B84;
         }
         .address_info{
-          line-height: 1rem;
+          line-height: 25px/$ppr;
           margin-left: .25rem;
           & header{
             & span{
-              font-size: .65rem;
+              font-size: 1.4rem;
               color: #000;
               &.name{
-                font-size: .8rem;
+                font-size: 1.6rem;
                 font-weight: 700;
                 margin-right: .25rem;
               }
             }
           }
           .address_detail{
-            font-size: .6rem;
+            font-size: 1.4rem;
           }
         }
       }
       .icon_also {
         color: #767B85;
-        font-size: .7rem;
+        font-size: 1.2rem;
       }
     }
     .food_list {
       background-color: white;
-      margin-top: .4rem;
-      padding: 0 .5rem;
+      margin-top: 5px/$ppr;
+      padding: 0 10px/$ppr;
       .commodity-list {
-        padding: .5rem 0;
+        padding: 10px/$ppr 0;
         .c_item {
-          padding: .25rem 0;
+          padding: 5px/$ppr 0;
           display: flex;
           border-bottom: 1px solid #f5f5f5;
           &:last-child{
             border-bottom: none;
           }
           .c_item_img {
-            width: 3.5rem;
-            height: 3.5rem;
-            //flex: 0 0 3rem;
+            width: 100px/$ppr;
+            height: 100px/$ppr;
             & img{
               max-width: 100%;
             }
           }
           .c_item_info {
             flex: 1;
-            margin-left: .3rem;
+            margin-left: 5px/$ppr;
             .item_title {
-              font-size: .58rem;
-              height: 1.8rem;
-              line-height: .9rem;
+              font-size: 1.2rem;
+              height: 48px/$ppr;
+              line-height: 24px/$ppr;
               overflow: hidden;
             }
             .item_info {
-              line-height: 1.2rem;
+              line-height: 24px/$ppr;
               & span{
                 display: inline-block;
                 &.item_price {
-                  font-size: .7rem;
+                  font-size: 1.4rem;
                   color: red;
                   font-weight: 700;
                 }
                 &.item_number {
-                  font-size: .6rem;
-                  padding: .2rem 0;
+                  font-size: 1.2rem;
                   color: #6d6d6d;
                 }
               }
@@ -308,24 +308,26 @@ export default{
       }
     }
     .list_box {
+      padding: 0rem 10px/$ppr;
       .header_style {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background: url('../../assets/rightarrow_new.png') no-repeat right center;
-        background-size: .4rem;
-        line-height: 2.2rem;
+        background-size: 8px/$ppr;
+        line-height: 45px/$ppr;
         .header_h2 {
-          font-size: .6rem;
+          font-size: 1.2rem;
         }
         .declare {
           flex: 1;
-          padding: 0 .75rem 0 .5rem;
-          font-size: .6rem;
+          padding: 0 15px/$ppr;
+          font-size: 1.2rem;
           text-align: right;
           & input[type="text"] {
             width: 100%;
             white-space: nowrap;
+            font-size: 1.2rem;
           }
           &.d_color {
             color: #a5a5a5;
@@ -336,9 +338,9 @@ export default{
           justify-content: center;
           background: #fff;
           border: 1px solid #e5e5e5;
-          border-radius: 14rem;
-          width: 2.3rem;
-          height: 1.2rem;
+          border-radius: 20rem;
+          width: 58px/$ppr;
+          height: 32px/$ppr;
           line-height: 1.3rem;
           position: relative;
           top: 0;
@@ -350,8 +352,8 @@ export default{
             border-color: #4CD964;
           }
           .slide_bt {
-            width: 1.14rem;
-            height: 1.14rem;
+            width: 30px/$ppr;
+            height: 30px/$ppr;
             background: #fff;
             border-radius: 50%;
             position: absolute;
@@ -364,7 +366,7 @@ export default{
             box-sizing: border-box;
             overflow: hidden;
             &.trans_right {
-              transform: translateX(1.1rem);
+              transform: translateX(26px/$ppr);
               box-shadow: none;
             }
           }
@@ -372,24 +374,26 @@ export default{
       }
     }
     .wait_price {
-      padding: 0rem .5rem;
+      padding: 0rem 10px/$ppr;
       background-color: white;
-      margin-top: .4rem;
+      margin-top: 8px/$ppr;
       .wait_price_div{
         display: flex;
         justify-content: space-between;
-        background-size: .4rem;
-        line-height: 1.4rem;
-        font-size: .6rem;
+        line-height: 38px/$ppr;
+        font-size: 1.2rem;
         & .w_span{
           color: red;
         }
       }
     }
+    .null_div{
+      width: 100%;
+      height: 60px/$ppr;
+    }
     .pay_way{
-      padding: 0rem .5rem;
       background-color: white;
-      margin-top: .4rem;
+      margin-top: 8px/$ppr;
       .border_bottom{
         border-bottom: 1px solid #f1f1f1;
         &:last-child{
@@ -400,21 +404,21 @@ export default{
         display: flex;
         justify-content: space-between;
         color: #000;
-        padding-right: .75rem;
+        padding-right: 15px/$ppr;
         background: url('../../assets/rightarrow_new.png') no-repeat right center;
-        background-size: .4rem;
+        background-size: 8px/$ppr;
         & span{
-          line-height: 2.1rem;
-          font-size: .6rem;
+          line-height: 45px/$ppr;
+          font-size: 1.2rem;
           &.s_title{
             & i{
               display: inline;
               background: red;
-              padding: .1rem .4rem;
+              padding: 5px/$ppr 8px/$ppr;
               color: white;
-              margin-left: .25rem;
+              margin-left: 5px/$ppr;
               border-radius: 2px;
-              font-size: .6rem;
+              font-size: 1rem;
             }
           }
           &.s_status{
@@ -425,7 +429,6 @@ export default{
     }
     .order_remark{
       background-color: white;
-      padding: 0 .5rem;
     }
   }
   .order_pay_button{
@@ -437,17 +440,17 @@ export default{
     background: #3c3c3c;
     justify-content: space-between;
     align-items: center;
-    line-height: 2.5rem;
+    line-height: 56px/$ppr;
     .total_price{
-      padding: 0 .25rem 0 1rem;
+      padding: 0 10px/$ppr 0;
       color: white;
-      font-size: .64rem;
+      font-size: 1.4rem;
     }
     .order_button{
-      padding: 0 1rem;
+      padding: 0 20px/$ppr;
       background: #0ECC3F;
       color: white;
-      font-size: .65rem;
+      font-size: 1.4rem;
       & a{
         display: inline-block;
         color: white;
@@ -458,29 +461,29 @@ export default{
     position: fixed;
     z-index: 33;
     width: 100%;
-    height: 12rem;
+    height: 220px/$ppr;
     background: white;
     bottom: 0;
     left: 0;
     .mode_title{
       width: 100%;
-      height: 2.2rem;
-      line-height: 2.2rem;
+      height: 48px/$ppr;
+      line-height: 48px/$ppr;
       text-align: center;
       background: #ececec;
-      font-size: .7rem;
+      font-size: 1.4rem;
       color: black;
     }
     .select_way{
-      padding: 0 .5rem;
+      padding: 10px/$ppr;
       .select_way_li{
-        line-height: 2.3rem;
-        font-size: .6rem;
+        line-height: 40px/$ppr;
+        font-size: 1.2rem;
         background: url('../../assets/icon-meixuanze.png') no-repeat right center;
-        background-size: 1.3rem;
+        background-size: 24px/$ppr;
         &.select_on{
           background: url('../../assets/icon-xuanze.png') no-repeat right center;
-          background-size: 1.3rem;
+          background-size: 24px/$ppr;
         }
       }
     }

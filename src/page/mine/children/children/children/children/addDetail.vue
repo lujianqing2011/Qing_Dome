@@ -195,6 +195,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .add-detail-page{
   position: absolute;
   top: 0;
@@ -206,7 +208,7 @@ export default{
   .add-detail{
     position: absolute;
     width: 100%;
-    top: 2.2rem;
+    top: 54px/$ppr;
     left: 0;
     bottom: 0;
     overflow: hidden;
@@ -218,9 +220,9 @@ export default{
       & li{
         flex: 1;
         text-align: center;
-        height: 2.1rem;
-        line-height: 2.1rem;
-        font-size: .7rem;
+        height: 48px/$ppr;
+        line-height: 48px/$ppr;
+        font-size: 1.4rem;
         &.active-tab{
           position: absolute;
           left: 0;
@@ -235,7 +237,7 @@ export default{
     .sn-tab-content{
       display: flex;
       position: absolute;
-      top: 2.1rem;
+      top: 48px/$ppr;
       left: 0;
       bottom: 0;
       transition: all .3s ease-out;
@@ -247,11 +249,11 @@ export default{
         word-break: break-all;
         .city-list{
           & li{
-            height: 2.1rem;
-            line-height: 2.1rem;
-            font-size: .7rem;
+            height: 48px/$ppr;
+            line-height: 48px/$ppr;
+            font-size: 1.4rem;
             border-bottom: 1px solid #dcdcdc;
-            text-indent: .75rem;
+            text-indent: 10px/$ppr;
           }
         }
       }

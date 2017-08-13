@@ -18,12 +18,10 @@ time, mark, audio, video, input, button {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font-weight: normal;
     vertical-align: baseline;
     outline: none;
     font-style: normal;
-    font-family: "Microsoft Yahei";
     user-select: none;                              /* 禁止用户选择和复制内容 */
     -webkit-touch-callout: none;                    /* 防止用户复制和保存图片 */
     -webkit-text-size-adjust: none;                 /* 禁用Webkit内核浏览器的文字大小调整 */ 
@@ -36,7 +34,19 @@ footer, header, menu, nav, section {
 }
 
 body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font: 16px/1.5 '微软雅黑',Helvetica,Tahoma,Arial,'华文细黑',sans-serif;
+    // min-width: 320px;
+    // max-width: 640px;
+    // margin: 0 auto;
+    overflow-x: hidden
+}
+
+body {
     line-height: 1;
+    font: 16px/1.5 "Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
+    color: #333;
 }
 
 blockquote, q {
@@ -89,46 +99,38 @@ li {
 html, body {
     width: 100%;
     height: 100%;
+    min-width: 320px;
 }
 
-html {
-    font-size : 20px;
-}
-@media only screen and (min-width: 401px){
-    html {
-        font-size: 25px !important;
-    }
-}
-@media only screen and (min-width: 428px){
-    html {
-        font-size: 26.75px !important;
-    }
-}
-@media only screen and (min-width: 481px){
-    html {
-        font-size: 30px !important; 
-    }
-}
-@media only screen and (min-width: 569px){
-    html {
-        font-size: 35px !important; 
-    }
-}
-@media only screen and (min-width: 641px){
-    html {
-        font-size: 40px !important; 
-    }
-}
-body {
-    -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-size: 1.2rem;
-    font-family: Microsoft Yahei,Helvetica,Arial;
-    // min-width: 320px;
-    // max-width: 640px;
-    // margin: 0 auto;
-    overflow-x: hidden
-}
+// html {
+//     font-size : 20px;
+// }
+// @media only screen and (min-width: 401px){
+//     html {
+//         font-size: 25px !important;
+//     }
+// }
+// @media only screen and (min-width: 428px){
+//     html {
+//         font-size: 26.75px !important;
+//     }
+// }
+// @media only screen and (min-width: 481px){
+//     html {
+//         font-size: 30px !important; 
+//     }
+// }
+// @media only screen and (min-width: 569px){
+//     html {
+//         font-size: 35px !important; 
+//     }
+// }
+// @media only screen and (min-width: 641px){
+//     html {
+//         font-size: 40px !important; 
+//     }
+// }
+
 img {
     vertical-align: middle;
     border: 0 none;

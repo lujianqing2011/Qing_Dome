@@ -1,3 +1,6 @@
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .mine-page{
   height: 100%;
   width: 100%;
@@ -18,29 +21,29 @@
       background: -webkit-linear-gradient(top, #FF3B84, rgba(255, 59, 59, 0.78));
       .user-basic{
         width: 100%;
-        height: 7.5rem;
+        height: 180px/$ppr;
         position: relative;
         z-index: 2;
         .user-avatar{
           position: absolute;
-          top: 1.25rem;
+          top: 30px/$ppr;
           left: 0px;
           right: 0px;
           margin: 0 auto;
-          height: 3rem;
+          height: 75px/$ppr;
           overflow: hidden;
         }
       }
       .userinfo-box{
         position: absolute;
         left: 0px;
-        bottom: 3.75rem;
+        bottom: 96px/$ppr;
         display: block;
         width: 100%;
         text-align: center;
         z-index: 5;
         .name{
-          font-size: .9rem;
+          font-size: 1.6rem;
           color: white;
           font-weight: 700;
         }
@@ -50,17 +53,17 @@
         display: flex;
         .user-product{
           flex: 1;
-          margin: .5rem 0;
+          margin: 10px/$ppr 0;
           text-align: center;
-          font-size: .6rem;
+          font-size: 1.2rem;
           color: white;
           border-right: 1px solid #e8e8e8;
           &:last-child{
             border-right: 0px;
           }
           & p{
-            height: .8rem;
-            line-height: .8rem;
+            height: 18px/$ppr;
+            line-height: 18px/$ppr;
           }
         }
       }
@@ -68,21 +71,24 @@
       
     .order-state{
       background: white;
-      margin-bottom: .25rem;
+      margin-bottom: 8px/$ppr;
       .slide-link{
-        padding: .7rem 7% .7rem 1.9rem;
-        font-size: .64rem;
+        padding: 0 7% 0 44px/$ppr;
+        font-size: 1.4rem;
         position: relative;
-        background: url('../../assets/mine/rightarrow_new.png') no-repeat 97% center;
-        background-size: .35rem;
-        line-height: .7rem;
+        background: url('../../assets/rightarrow_new.png') no-repeat 97% center;
+        background-size: 8px/$ppr;
+        height: 50px/$ppr;
+        line-height: 50px/$ppr;
         border-bottom: 1px solid #f6f6f6;
-        color: #464646;
+        color: #333;
         .here-icon{
-          width: 1.05rem;
-          height: 1.05rem;
+          width: 26px/$ppr;
+          height: 26px/$ppr;
+          border-radius: 50%;
+          overflow: hidden;
           position: absolute;
-          left: .5rem;
+          left: 10px/$ppr;
           top: 0;
           bottom: 0;
           margin: auto 0;
@@ -90,8 +96,7 @@
         & em{
           float: right;
           display: inline-block;
-          font-size: .56rem;
-          line-height: .75rem;
+          font-size: 1.2rem;
           color: #999;
         }
       }
@@ -99,35 +104,35 @@
         display: flex;
         border-bottom: 1px solid #f6f6f6;
         .icon-f{
-          background: url('../../assets/mine/fukuan-001.png') no-repeat center .35rem;
+          background: url('../../assets/mine/fukuan-001.png') no-repeat center 8px/$ppr;
         }
         .icon-s{
-          background: url('../../assets/mine/shouhuo01.png') no-repeat center .4rem;
+          background: url('../../assets/mine/shouhuo01.png') no-repeat center 8px/$ppr;
         }
         .icon-p{
-          background: url('../../assets/mine/pd-return11.png') no-repeat center .39rem;
+          background: url('../../assets/mine/pd-return11.png') no-repeat center 8px/$ppr;
         }
         .order-bt{
           flex: 1;
           position: relative;
           text-align: center;
-          padding: 1.5rem 0 .5rem 0;
+          padding: 36px/$ppr 0 10px/$ppr 0;
           color: #4d525d;
-          font-size: .56rem;
-          background-size: .9rem;
+          font-size: 1.2rem;
+          background-size: 24px/$ppr;
           & i{
             position: absolute;
-            top: .2rem;
-            left: 1.5rem;
+            top: 5px/$ppr;
+            left: 36px/$ppr;
             right: 0;
             margin: auto;
-            width: .8rem;
-            height: .8rem;
-            line-height: .8rem;
+            width: 20px/$ppr;
+            height: 20px/$ppr;
+            line-height: 20px/$ppr;
             text-align: center;
             background: red;
             color: white;
-            font-size: .6rem;
+            font-size: 1rem;
             border-radius: 50%;
           }
         }

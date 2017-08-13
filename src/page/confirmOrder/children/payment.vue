@@ -39,6 +39,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .payment_page{
   position: fixed;
   top: 0;
@@ -48,14 +50,14 @@ export default{
   z-index: 26;
   background: white;
   .need_pay {
-    padding: 1rem .5rem;
+    padding: 15px/$ppr 10px/$ppr;
     & span {
       display: inline-block;
       &.title {
-        font-size: .8rem;
+        font-size: 1.4rem;
       }
       &.pay {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: 700;
       }
     }
@@ -65,34 +67,33 @@ export default{
     height: 100%;
     background: #fff;
     .payment_content_h2{
-      line-height: 2rem;
-      font-size: .65rem;
-      padding: 0 .5rem;
+      line-height: 50px/$ppr;
+      font-size: 1.4rem;
+      padding: 0 10px/$ppr;
     }
     .pay_item{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0 1rem 0 .5rem;
+      padding: 10px/$ppr;
       background: url('../../../assets/rightarrow_new.png') no-repeat 97% center;
-      background-size: .4rem;
-      height: 2.3rem;
-      margin: 0.25rem 0 .5rem 0;
+      background-size: 8px/$ppr;
+      height: 48px/$ppr;
       .pay_icon{
-        width: 2.1rem;
+        width: 48px/$ppr;
         height: 100%;
         background: url('../../../assets/confirmOrder/zfb.png') no-repeat left center;
-        background-size: 2.1rem;
-        margin-right: .4rem;
+        background-size: 48px/$ppr;
+        margin-right: 10px/$ppr;
       }
       .pay_info{
-        line-height: .9rem;
+        line-height: 24px/$ppr;
         .pay_info_name{
-          font-size: .6rem;
+          font-size: 1.4rem;
         }
         .pay_info_hint{
           color: #9e9e9e;
-          font-size: .55rem;
+          font-size: 1.2rem;
         }
       }
     }
