@@ -16,7 +16,7 @@
         <h2 class="h2-title">我是热卖的</h2>
         <ul>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -24,7 +24,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -32,7 +32,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -40,7 +40,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -48,7 +48,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -56,7 +56,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -64,7 +64,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -72,7 +72,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -80,7 +80,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -88,7 +88,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -96,7 +96,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -104,7 +104,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -112,7 +112,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -120,7 +120,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -128,7 +128,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -136,7 +136,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -144,7 +144,7 @@
             </div>
           </li>
           <li class="food-list-hook">
-            <div class="img"></div>
+            <div class="img"><img src="../../assets/pic.jpg"></div>
             <div class="content">
               <h2>我是商品的标题我是商品的标题我是商品的标题</h2>
               <div class="describe">咸粥</div>
@@ -212,18 +212,6 @@ export default {
         },
         {
           liname: '我是12'
-        },
-        {
-          liname: '我是13'
-        },
-        {
-          liname: '我是13'
-        },
-        {
-          liname: '我是13'
-        },
-        {
-          liname: '我是13'
         }
       ]
     }

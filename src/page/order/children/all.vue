@@ -3,7 +3,7 @@
     <div class="acart-box" v-for="list in orderList">
       <div class="acart-goods" v-for="goodsList in list">
       <div class="goods_state">
-        <span>订单编号：{{goodsList.order_number}}</span>
+        <span>日期：{{goodsList.order_number}}</span>
         <span>{{goodsList.order_status}}</span>
       </div>
         <div class="goods" v-for="goods in goodsList.commodity" >

@@ -154,6 +154,8 @@ export default{
 
 <style lang="scss" scoped>
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .showlist-enter-active, .showlist-leave-active {
   transition: all .3s;
   transform: translateY(0);
@@ -165,13 +167,13 @@ export default{
 // 顶部插入的样式S
 .header-logo{
   width: 100%;
-  height: 2.2rem;
+  height: 54px/$ppr;
   background: url('../../components/header/d1mcw-logo.png') no-repeat center center;
   background-size: 75%;
 }
 .header-seek{
   width: 100%;
-  height: 2.2rem;
+  height: 100%;
   display: flex;
   position: relative;
   align-items: center;
@@ -179,30 +181,31 @@ export default{
   & > a{
     width: 100%;
   }
-  &:before{
+  &:before {
     content: ' ';
-    width: .9rem;
-    height: .9rem;
+    width: 22px/$ppr;
+    height: 22px/$ppr;
     background: url('../../components/header/icon_seek.png') no-repeat center center;
     background-size: 100%;
     position: absolute;
-    left: .4rem;
-    top: .7rem;
+    left: 8px/$ppr;
+    top: 0;
+    bottom: 0;
     z-index: 99;
+    margin: auto 0;
   }
-  .seek-input{
-    width: 100%;
-    height: 1.5rem;
+  .seek-input {
     display: block;
-    flex: 1;
+    width: 100%;
+    height: 40px/$ppr;
     border-radius: 2rem;
-    padding: 0 1rem 0 1.5rem;
-    margin: auto;
-    font-size: .7rem;
+    padding: 0 10px/$ppr 0 36px/$ppr;
+    flex: 1;
+    font-size: 1.4rem;
     font-weight: 700;
-    font-family: "Microsoft Yahei";
-    color: #a9a9a9;
     box-sizing: border-box;
+    margin: auto;
+    font-family: "Microsoft Yahei";
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow-x: hidden;
@@ -231,14 +234,14 @@ export default{
       // box-shadow: 0px 0px 5px #FF72A6;
       .filter_class{
         flex: 1;
-        padding: .6rem 0;
+        padding: 10px/$ppr 0;
         text-align: center;
-        font-size: .7rem;
+        font-size: 1.4rem;
         color: white;
         cursor: pointer;
         .class_list {
           position: absolute;
-          top: 2rem;
+          top: 45px/$ppr;
           left: 0;
           width: 100%;
           height: 100px;
@@ -248,7 +251,7 @@ export default{
           display: inline-block;
           vertical-align: middle;
           transition: all 0.2s;
-          font-size: .6rem;
+          font-size: 1.4rem;
           &.sort_icon{
             transform: rotate(180deg);
             transition: all 0.2s;
@@ -260,7 +263,7 @@ export default{
         }
         .class_list{
           position: absolute;
-          top: 2rem;
+          top: 45px/$ppr;
           left: 0;
           z-index: 1;
           width: 100%;
@@ -273,26 +276,28 @@ export default{
               padding-bottom: 1rem;
               border-bottom: 1px solid white;
               & input[type="number"]{
-                width: 3.5rem;
-                height: 1.5rem;
-                line-height: 1.5rem;
+                width: 70px/$ppr;
+                height: 35px/$ppr;
+                line-height: 35px/$ppr;
                 border-radius: 2px;
-                padding: 0 .25rem;
+                padding: 0 5px/$ppr;
                 text-align: center;
+                font-size: 1.4rem;
               }
             }
             .category{
               .c_h2{
-                height: 2rem;
-                line-height: 2rem;
+                height: 50px/$ppr;
+                line-height: 50px/$ppr;
+                font-size: 1.4rem;
               }
               .c_ul{
                 .c_li{
                   float: left;
                   width: 33.33%;
-                  height: 2.2rem;
-                  line-height: 1.75rem;
-                  padding: 0 .2rem .4rem;
+                  height: 55px/$ppr;
+                  line-height: 40px/$ppr;
+                  padding: 0 10px/$ppr 15px/$ppr;
                   box-sizing: border-box;
                   & span{
                     display: inline-block;
@@ -315,26 +320,26 @@ export default{
             }
             .category_button{
               display: flex;
-              margin-top: 1rem;
+              margin-top: 20px/$ppr;
               & .bt{
                 flex: 1;
                 & button{
                   width: 100%;
-                  height: 1.9rem;
-                  line-height: 1.9rem;
+                  height: 45px/$ppr;
+                  line-height: 45px/$ppr;
                   border-radius: 2px;
-                  font-size: .6rem;
+                  font-size: 1.4rem;
                 }
               }
               .l_button{
-                padding-right: .5rem;
+                padding-right: 5px/$ppr;
                 & button{
                   background: #f5f5f5;
                   color: #666;
                 }
               }
               .r_button{
-                padding-left: .5rem;
+                padding-left: 5px/$ppr;
                 & button{
                   background: #2CDC00;
                   color: white;
@@ -353,7 +358,7 @@ export default{
     box-shadow: 0px 0px 5px #FF72A6;
   }
   .goods_content{
-    margin-top: .25rem;
+    margin-top: 5px/$ppr;
     background: #f2f2f2;
     .goods_main{
       .goods_box{
@@ -380,10 +385,10 @@ export default{
             .goods_info{
               background: white;
               .info{
-                margin: .25rem .5rem 0 .5rem;
+                margin: 5px/$ppr 10px/$ppr 0 10px/$ppr;
                 height: 1.8rem;
-                line-height: .9rem;
-                font-size: .58rem;
+                line-height: 24px/$ppr;
+                font-size: 1.2rem;
                 display: box;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
@@ -393,18 +398,18 @@ export default{
                 word-break: break-all;
               }
               .goods_price{
-                padding: 0rem .5rem;
+                padding: 0rem 10px/$ppr;
                 .price{
-                  font-size: .64rem;
+                  font-size: 1.4rem;
                   display: inline-block;
                   padding: 0rem 0;
                   color: red;
                 }
                 & del{
                   display: block;
-                  height: 1.2rem;
-                  line-height: 1.2rem;
-                  font-size: .58rem;
+                  height: 24px/$ppr;
+                  line-height: 24px/$ppr;
+                  font-size: 1.2rem;
                 }
               }
             }

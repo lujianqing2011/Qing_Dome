@@ -9,7 +9,7 @@
         <div class="item">
           <div class="cart-checkbox location" :class="{check: goods.goods_checked}" @click="selectGoods(goods,index)"></div>
           <div class="cart-box">
-            <div class="left">
+            <div class="left" date-src="goods.goods_pic">
               <img :src="goods.goods_pic">
             </div>
             <div class="right" v-show="!showEdit">
@@ -27,9 +27,9 @@
             <div class="edit_goods" :class="{on: showEdit}">
                 <div class="count_goods">
                   <div class="count">
-                    <a class="count_bt" href="javascript:;" @click="dealCount('minus',goods, goods.goods_id)">-</a>
+                    <a class="count_bt" href="javascript:;" @click="dealCount('minus',goods, goods.goods_id, index)">-</a>
                     <a class="count_number" href="javascript:;">{{goods.goods_count}}</a>
-                    <a class="count_bt" href="javascript:;" @click="dealCount('add',goods, goods.goods_id)">+</a>
+                    <a class="count_bt" href="javascript:;" @click="dealCount('add',goods, goods.goods_id, index)">+</a>
                   </div>
                 </div>
               <div class="delete_goods" @click="delectGoods(goods,index)">删除</div>
@@ -40,7 +40,7 @@
 
     </div>
 
-    <div class="payment">
+    <div class="payment" v-if="cartGoods.length">
       <div class="payment-total-bar">
         <div class="cart-checkbox location" :class="{check: goodsAll}" @click="selectAll()" :all="all"></div>
         <div class="total-price">
@@ -99,6 +99,7 @@ export default {
       clearingGoods: [],  //已选择要购买的商品
       cartGoods: [],   //购物车列表
       goConfirmOrderShow: false
+      
     }
   },
   created() {
@@ -130,13 +131,24 @@ export default {
       if(this.goods_count !== this.cartGoods.length){
         this.goodsAll = false;
       }else {
-        this.goodsAll = true;
+        this.goodsAlls = true;
       }
     }
     
   },
   methods: {
-    
+    drop(el) {
+      for (let i=0;i<this.balls.length;i++) {
+        let ball = this.balls[i];
+        if(!ball.show) {
+          ball.show = true;
+          ball.el = el;
+          this.dropBalls.push(ball);
+          return
+        }
+      }
+    },
+
     /**
      * 单选
      */
@@ -192,7 +204,7 @@ export default {
     /**
      * 增减商品数量
      */
-    dealCount(how, goods, goods_id) {
+    dealCount(how, goods, goods_id, index) {
       if(how === 'add') {
         let count = (++goods.goods_count);
         this.countMoney();

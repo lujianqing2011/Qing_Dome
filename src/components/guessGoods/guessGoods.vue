@@ -19,7 +19,7 @@
     </li>
   </ul>
   <div class="none_more" v-show="touchend">已经到底了，没有更多了</div>
-  <aside class="comeTop" v-show="showbackTop" @click="backTop()">顶</aside>
+  <aside class="comeTop iconfont" v-show="showbackTop" @click="backTop()">&#xe69f;</aside>
   <loading v-show="showLoading"></loading>
 </div>
   
@@ -131,13 +131,12 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 
 .goods-page{
   width: 100%;
-  margin-top: .25rem;
+  margin-top: 10px/$ppr;
   .title-h2{
-    line-height: 42px/$ppr;
+    line-height: 50px/$ppr;
     font-size: 1.4rem;
     font-weight: bold;
     background-color: white;
-    margin-bottom: 4px/$ppr;
     border-bottom: 1px solid #ECECEC;
     text-align: center;
   }
@@ -199,18 +198,19 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     color: #808080;
   }
   .comeTop {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 50px/$ppr;
+    height: 50px/$ppr;
+    line-height: 50px/$ppr;
+    color: #a5a5a5;
     text-align: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.95);
-    font-size: .72rem;
+    font-size: 1.8rem;
     border: 1px solid #e2e2e2;
     position: fixed;
     z-index: 999;
-    bottom: 4rem;
-    right: .5rem;
+    bottom: 20%;
+    right: 10px/$ppr;
   }
 }
 

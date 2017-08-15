@@ -14,7 +14,7 @@
 
       <!-- 广告图S -->
       <div class="dzdt">
-        <a href="#"><img src="../../assets/index/dzdt11.gif"></a>
+        <a href="#"><img src="../../assets/index/dzdt21.gif"></a>
       </div>
       <!-- 广告图E -->
 
@@ -36,7 +36,7 @@
 
       <!-- 秒杀商品S -->
       <div class="title_h2">
-        <span class="title">秒杀商品·闪购</span>
+        <span class="title">限时商品·闪购</span>
         <span class="time_countdown">
           <div class="time">
             <span class="alike hour-s">{{timeH}}</span>

@@ -21,6 +21,8 @@
 
 <style lang="scss" scoped >
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .loading-module{
   position: fixed;
   left: 0;
@@ -38,8 +40,8 @@
     opacity: 0.6;
   }
   .loading{
-    width: 2.9rem;
-    height: .8rem;
+    width: 60px/$ppr;
+    height: 15px/$ppr;
     position: absolute;
     top: -20%;
     bottom: 0;
@@ -48,12 +50,12 @@
     margin: auto;
     .the-load{
       display: inline-block;
-      width: .8rem;
-      height: .8rem;
+      width: 15px/$ppr;
+      height: 15px/$ppr;
       background: rgb(255, 53, 53);
       border-radius: 5rem;
       float: left;
-      margin-right: .25rem;
+      margin-right: 5px/$ppr;
       animation-fill-mode: both;
       &:last-child{
         margin-right: 0;

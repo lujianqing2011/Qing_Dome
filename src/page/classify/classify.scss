@@ -50,11 +50,12 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           line-height: 40px/$ppr;
           padding: 0 .5rem;
           background: #eee;
-          border-left: 4px solid #9898ff;
+          border-left: 4px solid #FF3B84;
           font-weight: 700;
           font-size: 1.4rem;
         }
         & ul{
+          margin-left: 5px/$ppr;
           & li{
             margin-top: 5px/$ppr;
             display: flex;
@@ -63,12 +64,16 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
               width: 100px/$ppr;
               height: 100px/$ppr;
               background: red;
+              & img{
+                width: 100%;
+                display: block;
+              }
             }
             .content{
               flex: 1;
-              background: black;
+              background: white;
               padding: 0 5px/$ppr;
-              color: white;
+              color: #000;
               font-size: 1.2rem;
               & h2{
                 font-size: 1.2rem;

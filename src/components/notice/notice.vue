@@ -6,10 +6,12 @@
     <div class="notice-center">
       <swiper :options="swiperNotice" ref="mySwiperA" class="bannerSwiper">
         <swiper-slide>
-          <span class="label-new">NEW</span>精品超市逢9，满就包邮
+          <p>精品超市逢9，满就包邮</p>
+          <p>HOT我是公告去的内容</p>
         </swiper-slide>
         <swiper-slide>
-          <span class="label-new">HOT</span>我是公告去的内容
+          <p>HOT我是公告去的内容</p>
+          <p>2017-02-09号起发货下单恢复正常</p>
         </swiper-slide>
       </swiper>
     </div>
@@ -38,45 +40,38 @@ export default{
 </script>
 
 <style lang="scss">
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
  
 .notice_div {
   
   .notice_box {
-    height: 2rem;
-    width: 100%;
-    padding: .25rem 0;
+    height: 48px/$ppr;
     display: flex;
     background: #fff;
     overflow: hidden;
     border-bottom: 1px solid #F1F1F1;
+    padding: 0 10px/$ppr;
     .notice_logo {
-      flex: 0 0 3.8rem;
+      flex: 0 0 80px/$ppr;
       background: url('../../assets/index/notice_pic1.png') no-repeat;
-      background-size: 3.5rem;
-      margin-left: .25rem;
+      background-size: 80px/$ppr;
+      margin-right: 10px/$ppr;
     }
     .notice-center {
       flex: 1;
-      line-height: 2rem;
-      font-size: .64rem;
+      line-height: 20px/$ppr;
+      font-size: 1.2rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding: 0 .5rem 0 .1rem;
       position: relative;
-      & .label-new {
-        border: 1px solid red;
-        padding: 0 .1rem;
-        margin-right: .2rem;
-        font-size: .6rem;
-        color: red;
-        border-radius: 2px;
-      }
     }
   }
   .notice_img {
     & img {
       width: 100%;
+      display: block;
     } 
   }
 }

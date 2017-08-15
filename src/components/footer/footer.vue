@@ -55,6 +55,9 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 .footer-nav{
   .nav{
     width: 100%;
+    max-width: 800px;
+    min-width: 320px;
+    margin: 0 auto;
     height: 54px/$ppr;
     position: fixed;
     bottom: 0;
@@ -82,7 +85,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           width: 100%;
           display: block;
           font-size: 1.8rem;
-          margin-top: 5px/$ppr;
+          margin-top: 8px/$ppr;
           margin-bottom: 1px/$ppr;
         }
       }

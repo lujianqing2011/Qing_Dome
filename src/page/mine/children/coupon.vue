@@ -68,6 +68,8 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .coupon_page{
   position: absolute;
   top: 0;
@@ -78,13 +80,13 @@ export default{
   background: #f2f2f2;
   .coupon_content{
     .coupon_box{
-      padding: .5rem;
+      padding: 10px/$ppr;
       .coupon_box_div{
         width: 100%;
         background: #fff;
         border-radius: 6px;
         overflow: hidden;
-        margin-bottom: .5rem;
+        margin-bottom: 10px/$ppr;
         box-shadow: 1px 1px 6px #DEDEDE;
         .coupon_top{
           width: 100%;
@@ -94,34 +96,34 @@ export default{
           }
           & .price{
             color: white;
-            font-size: 1.4rem;
-            padding: .5rem;
-            text-indent: 10px;
+            font-size: 2.4rem;
+            padding: 10px/$ppr 10px/$ppr 0 10px/$ppr;
+            text-indent: 10px/$ppr;
             & span{
-              font-size: 1rem;
+              font-size: 1.4rem;
             }
           }
           & .explain{
             color: white;
-            font-size: .56rem;
-            padding: .2rem .5rem .75rem .5rem;
+            font-size: 1.2rem;
+            padding: 0 10px/$ppr 10px/$ppr;
           }
         }
         .coupon_bottom{
-          padding: .5rem;
+          padding: 10px/$ppr;
           & .coupon_bottom_p{
             font-size: 0;
-            height: 1rem;
-            line-height: 1rem;
+            height: 24px/$ppr;
+            line-height: 24px/$ppr;
             & span {
-              font-size: .6rem;
+              font-size: 1.2rem;
             }
             & .icon_size{
-              font-size: .72rem;
+              font-size: 1.4rem;
               color: #6f6f6f;
             }
             & .status{
-              margin: 0 .3rem;
+              margin: 0 5px/$ppr;
             }
           }
         }

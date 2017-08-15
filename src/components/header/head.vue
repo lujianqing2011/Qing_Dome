@@ -145,7 +145,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
       .nav_icon{
         display: block;
-        margin-top: 5px/$ppr;
+        margin-top: 8px/$ppr;
         margin-bottom: 1px/$ppr;
         font-size: 1.8rem;
       }

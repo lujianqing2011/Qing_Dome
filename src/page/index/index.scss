@@ -44,8 +44,11 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           overflow: hidden;
           & img{
             width: 100%;
+            max-width: 100px;
             display: block;
-            margin: 0 auto 10%;
+            padding: 4px/$ppr;
+            margin: 0 auto;
+            box-sizing: border-box;
           }
         }
       }
@@ -94,8 +97,8 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   }
   .title_h2{
     display: flex;
-    height: 42px/$ppr;
-    line-height: 42px/$ppr;
+    height: 50px/$ppr;
+    line-height: 50px/$ppr;
     background-color: #fff;
     padding: 0 10px/$ppr;
     position: relative;
@@ -115,7 +118,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           font-size: 1.2rem;
           border: 1px solid #ececec;
           border-radius: 2px;
-          padding: 2px/$ppr;
+          padding: 5px/$ppr;
           color: #000;
         }
         .alike-b {

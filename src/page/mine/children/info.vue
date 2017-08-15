@@ -48,6 +48,9 @@
   <transition name="router-slid" mode="out-in">
     <router-view></router-view>
   </transition>
+
+  <loading v-show="showLoading"></loading>
+
 </div>
 
 </template>
@@ -57,11 +60,13 @@
 import headerTop from 'src/components/header/head';
 import inquiryAlert from 'src/components/common/inquiryAlert';
 import { mapState } from 'vuex';
+import loading from 'src/components/common/loading';
 import { removeStore } from 'src/config/storage';
 
 export default{
   components: {
     headerTop,
+    loading,
     inquiryAlert
   },
   computed: {
@@ -95,15 +100,19 @@ export default{
         let input = document.querySelector('.head-file')
         let data = new FormData();
         data.append('file', input.files[0]);
-        try{ 
-          let response = await fetch('/api/users/' + this.userInfo.user_id, {
+        console.log(input.files[0])
+        try{
+          this.showLoading = true;
+          let response = await fetch('/api/users/', {
             method: 'POST',
             credentials: 'include',
             body: data
           })
+          this.showLoading = false
           let res = await response.json();
           console.log(res)
         }catch (error) {
+          this.showLoading = false
           alert('上传失败')
           throw new Error(error);
         }
@@ -115,7 +124,8 @@ export default{
     return{
       userName: '',
       alertText: "确定要退出？",
-      showPop: false
+      showPop: false,
+      showLoading: false
     }
   }
 }

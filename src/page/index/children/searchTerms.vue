@@ -91,15 +91,17 @@ export default{
 
 <style lang="scss">
 
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 .header-logo{
   width: 100%;
-  height: 2.2rem;
+  height: 54px/$ppr;
   background: url('../../../components/header/d1mcw-logo.png') no-repeat center center;
   background-size: 75%;
 }
 .header-seek{
   width: 100%;
-  height: 2.25rem;
+  height: 100%;
   display: flex;
   position: relative;
   align-items: center;
@@ -107,25 +109,27 @@ export default{
   & > a{
     width: 100%;
   }
-  &:before{
+  &:before {
     content: ' ';
-    width: .9rem;
-    height: .9rem;
+    width: 22px/$ppr;
+    height: 22px/$ppr;
     background: url('../../../components/header/icon_seek.png') no-repeat center center;
     background-size: 100%;
     position: absolute;
-    left: .4rem;
-    top: .7rem;
+    left: 8px/$ppr;
+    top: 0;
+    bottom: 0;
     z-index: 99;
+    margin: auto 0;
   }
-  .seek-input{
+  .seek-input {
     display: block;
     width: 100%;
-    height: 1.5rem;
+    height: 40px/$ppr;
     border-radius: 2rem;
-    padding: 0 1rem 0 1.5rem;
+    padding: 0 10px/$ppr 0 36px/$ppr;
     flex: 1;
-    font-size: .7rem;
+    font-size: 1.4rem;
     font-weight: 700;
     box-sizing: border-box;
     margin: auto;
@@ -139,7 +143,7 @@ export default{
   }
 }
 .search_bt{
-  font-size: .7rem;
+  font-size: 1.4rem;
   & a{
     color: white;
   }
@@ -153,39 +157,39 @@ export default{
   background: #f2f2f2;
   z-index: 999;
   .lately_seek{
-    padding: 0 .5rem;
+    padding: 0 10px/$ppr;
     .seek_title{
-      height: 2rem;
-      line-height: 2rem;
+      height: 50px/$ppr;
+      line-height: 50px/$ppr;
       .title{
-        font-size: .6rem;
+        font-size: 1.2rem;
       }
     }
     .seek_word{
       & li{
         float: left;
-        padding: .54rem .9rem;
-        font-size: .64rem;
+        padding: 8px/$ppr 20px/$ppr;
+        font-size: 1.4rem;
         background: white;
-        margin: 0 .5rem .5rem 0;
+        margin: 0 10px/$ppr 10px/$ppr 0;
         border-radius: 20rem;
       }
     }
     .seek_null{
       text-align: center;
-      font-size: .6rem;
+      font-size: 1.2rem;
       color: #757575;
     }
   }
   .clear_button{
-    font-size: .68rem;
-    width: 10rem;
-    padding: .64rem 0;
+    font-size: 1.4rem;
+    width: 150px/$ppr;
+    padding: 10px/$ppr 0;
     text-align: center;
     color: #c7c7c7;
     border-radius: 20rem;
     border: solid 1px #e0e0e0;
-    margin: 1.5rem auto 0;
+    margin: 20px/$ppr auto 0;
   }
 }
   

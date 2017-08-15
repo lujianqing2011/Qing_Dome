@@ -314,7 +314,15 @@ export default {
           bannerimg: require('../../assets/details/banner3.jpg'),
           imgSrc: 'http:baidu.com'
         }
-      ]
+      ],
+      balls: [
+        { show: false, id:1 },
+        { show: false, id:1 },
+        { show: false, id:1 },
+        { show: false, id:1},
+        { show: false, id:1 }
+      ],
+      dropBall: []
     }
   }
 }
