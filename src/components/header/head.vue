@@ -3,16 +3,15 @@
   <section class="header">
     <section class="header-left">
       <slot name="logo"></slot>
-      <div class="goBack" v-if="goBack" @click="$router.go(-1)"></div>
+      <div class="goBack iconfont" v-if="goBack" @click="$router.go(-1)">&#xe67c;</div>
     </section>
     <section class="header-title">
       <div class="title" v-if="headerTitle" >{{headerTitle}}</div>
       <slot name="seek"></slot>
     </section>
-    <section class="header-right">
+    <section class="header-right change_color">
       <div class="headerNav" v-if="headerNav" :class="{ hide:showNav }" @click="showNav = !showNav"></div>
       <slot name="search"></slot>
-      <slot name="edit"></slot>
     </section>
   </section>
   
@@ -22,7 +21,7 @@
       :to = " { path:nav.path }"
       :key="nav"
       tag = "a"
-      class="nav-div"><i class="iconfont nav_icon" v-html="nav.icon"></i> {{ nav.navName }}
+      class="nav-div" ><i class="iconfont nav_icon" v-html="nav.icon"></i> {{ nav.navName }}
     </router-link>
   </nav>
 </header>
@@ -62,9 +61,11 @@ export default{
 <style lang="scss">
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 #header-top{
+  background-color: #f9fafd;
+  border-bottom: 1px solid #E8E8E8;
+  box-sizing: border-box;
   .header{
     display: flex;
-    background: #FF3B84;
     height: 54px/$ppr;
     line-height: 54px/$ppr;
     text-align: center;
@@ -74,15 +75,17 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       height: 100%;
       flex: 0 0 54px/$ppr;
       font-size: 1.4rem;
-      color: white;
+      color: #8c8c8c;
       cursor: pointer;
     }
     .header-left{
       .goBack{
         width: 100%;
         height: 100%;
-        background: url('./left.png') no-repeat 10px/$ppr center;
-        background-size: 40%;
+        color: #9E9E9E;
+        font-size: 1.8rem;
+        //background: url('./left.png') no-repeat 10px/$ppr center;
+        //background-size: 40%;
       }
     }
     .header-right{
@@ -108,50 +111,77 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             margin: 0 auto;
             border-left: 8px solid transparent;
             border-right: 8px solid transparent;
-            border-bottom: 8px solid #3A3A3A;
+            border-bottom: 8px solid #f9fafd;
           }
         }
       }
     }
     .header-title{
       height: 100%;
-      color: white;
+      color: #000;
       flex: 1;
       .title{
         width: 100%;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 700;
       }
     }
   }
   .header-nav{
     display: flex;
-    background: #3a3a3a;
+    background-color: #f9fafd;
     height: 0em;
-    line-height: 22px/$ppr;
+    line-height: 25px/$ppr;
     font-size: 1.2rem;
     transition: all 0.3s;
     overflow: hidden;
     &.show_nav{
-      height: 54px/$ppr;
+      height: 58px/$ppr;
     }
     .nav-div{
       flex: 1;
       text-align: center;
-      color: white;
+      color: #777;
       font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
       .nav_icon{
         display: block;
-        margin-top: 8px/$ppr;
+        margin-top: 7px/$ppr;
         margin-bottom: 1px/$ppr;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
       }
       &:active{
-        background: rgb(68, 68, 68);
+        background: #c7c7c7;
       }
+    }
+  }
+  &.use_color{
+    background-color: #FF3B84!important;
+    border: none!important;
+    .header-left{
+      color: #000 !important;
+    }
+    .headerNav{
+      background: url('./more1.png') no-repeat center center!important;
+      background-size: 50%!important;
+      &.hide{
+        background: url('./cuowu.png') no-repeat center center!important;
+        background-size: 50%!important;
+      }
+    }
+    .change_border{
+      border: 1px solid #EAEAEA!important;
+    }
+    .goBack{
+      color: white!important;
+    }
+    .header-title{
+      color: white!important;
+    }
+    .seek-input{
+      border: none!important;
     }
   }
 }

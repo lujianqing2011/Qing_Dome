@@ -25,6 +25,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 
 .acart-page {
   background-color: #eee;
+  overflow-x: hidden; 
   .acart-box {
     .acart-goods {
       position: relative;
@@ -40,7 +41,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         .left{
           width: 100px/$ppr;
           height: 100px/$ppr;
-          background: #eee;
+          background: #fff;
           & img{
             width: 100%;
             transition: all .5s;
@@ -50,17 +51,18 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           flex: 1;
           margin: 0 10px/$ppr 0 10px/$ppr;
           & h2{
-            height: 48px/$ppr;
-            line-height: 24px/$ppr;
+            height: 40px/$ppr;
+            line-height: 40px/$ppr;
             overflow: hidden;
             text-overflow: ellipsis;
-            -webkit-line-clamp: 2;
             word-break: break-word;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
           }
           .standard{
+            height: 30px/$ppr;
+            line-height: 30px/$ppr;
             font-size: 1.2rem;
             & span{
               color: #b1b1b1;
@@ -68,17 +70,24 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             }
           }
           .price-count{
-            font-size: 1.2rem;
+            font-size: 0;
             height: 24px/$ppr;
             line-height: 24px/$ppr;
             .price{
               display: inline-block;
-              color: red;
+              font-size: 1.4rem;
               font-weight: 700;
+              color: #000;
+              padding-right: 5px/$ppr;
             }
-            .count-right{
-              float: right;
+            .count{
+              font-size: 1.4rem;
               color: #929292;
+            }
+            .edit_right{
+              color: #616161;
+              font-size: 1.5rem;
+              float: right;
             }
           }
         }
@@ -105,7 +114,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
                 font-size: 1.4rem;
                 text-align: center;
                 &.count_bt {
-                  flex: 0 0 50px/$ppr;
+                  flex: 0 0 40px/$ppr;
                   background: #ececec;
                   &:active{
                     background: rgba(0, 0, 0, 0.35);
@@ -115,6 +124,22 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
                   background: #f1f1f1;
                   font-size: 1.4rem;
                 }
+              }
+            }
+            .call_off{
+              margin-top: 20px/$ppr;
+              text-align: center;
+              & span{
+                background: white;
+                display: inline-block;
+                height: 30px/$ppr;
+                line-height: 30px/$ppr;
+                font-size: 1.4rem;
+                width: 60px/$ppr;
+                text-align: center;
+                border: 1px solid #DADADA;
+                border-radius: 20rem;
+                color: #8A8A8A;
               }
             }
           }
@@ -136,7 +161,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             transform: translateX(0px);
             .delete_goods{
               transform: translate3d(0,0,0);
-              width: 54px/$ppr;
+              width: 50px/$ppr;
               border-radius: 2px;
             }
           }
@@ -186,17 +211,18 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
                 background: #FF3B84;
               }
               & .number{
-                width: 24px/$ppr;
-                height: 24px/$ppr;
+                width: 20px/$ppr;
+                height: 20px/$ppr;
+                line-height: 20px/$ppr;
                 display:inline-block;
-                background: rgb(255, 59, 132);
+                background: #f40;
                 text-align: center;
                 list-style: none;
                 position: absolute;
                 right: 0;
-                top: -4px/$ppr;
+                top: 0;
                 border-radius: 50px/$ppr;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: white;
               }
             }

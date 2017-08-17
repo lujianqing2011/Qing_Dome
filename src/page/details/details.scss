@@ -2,8 +2,17 @@
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 
 .details-page{
+  #load_img_state{
+    position: absolute; 
+    left: 0; 
+    top: 54px/$ppr; 
+    z-index: 999; 
+    height: 3px/$ppr;
+    background: #FF3B84;
+    transition: all 0.5s;
+  }
   width: 100%;
-  background-color: #eee;
+  background-color: #fff;
   font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
   .details-title{
     display: flex;
@@ -27,63 +36,53 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .details-box{
       background: #fff;
       padding: 0 10px/$ppr;
-      .details-title{
-        line-height: 24px/$ppr;
-        font-size: 1.2rem;
-        color: #4d525d;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: break-all;
-        background: #fff;
-        padding-top: 5px/$ppr;
-        font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
-      }
-      .product-subname{
-        color: rgb(150,150,150);
-        font-size: 1rem;
-        line-height: 20px/$ppr;
+      text-align: center;
+      .d_title{
+        line-height: 35px/$ppr;
+        font-size: 2rem;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 2;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // word-break: break-all;
+        color: #000;
       }
       .price{
-        line-height: 24px/$ppr;
-        font-size: 1.4rem;
+        line-height: 40px/$ppr;
+        font-size: 2rem;
         font-weight: 700;
         color: red;
       }
       .cost{
-        line-height: 24px/$ppr;
+        line-height: 30px/$ppr;
         color: rgb(150,150,150);
-        text-decoration: line-through;
-        font-size: 1.2rem;
-      }
-    }
-    .flex-box{
-      display: flex;
-      background: #fff;
-      padding: 5px/$ppr 10px/$ppr;
-      .flex-1{
-        flex: 1;
-        color: #6f6f6f;
-        font-size: 1rem;
+        font-size: 1.4rem;
+        & span{
+          display: line-block;
+          padding: 0 10px/$ppr;
+          &.c_cost{
+            text-decoration: line-through;
+          }
+        }
       }
     }
     .select{
       height: 42px/$ppr;
       line-height: 42px/$ppr;
       background-color: #fff;
-      padding: 0 10px/$ppr;
-      margin-top: 5px/$ppr;
-      font-size: 1.2rem;
-      color: #8e8e8e;
+      padding: 0 35px/$ppr 0 10px/$ppr;
+      font-size: 1.6rem;
+      color: #000;
       position: relative;
       border-bottom: 1px solid #eee;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       &:after{
         content: ' ';
         background: url('../../assets/also-icon.png') no-repeat right center;
-        background-size: 18px/$ppr;
-        width: 20px/$ppr;
-        font-size: 1.2rem;
+        background-size: 24px/$ppr;
+        width: 24px/$ppr;
         position: absolute;
         right: 10px/$ppr;
         top: 0;
@@ -97,7 +96,24 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       & .title-h2{
         height: 30px/$ppr;
         line-height: 30px/$ppr;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+      }
+      & .radio_module{
+          font-size: 0;
+        & label[name="radio"]{
+          display: inline-block;
+          background: #EFEFEF;
+          padding: 7px/$ppr 15px/$ppr;
+          font-size: 1.4rem;
+          margin: 5px/$ppr 10px/$ppr 5px/$ppr 0;
+          color: white;
+          border-radius: 4px;
+          color: #696969;
+          &.on{
+            background: red;
+            color: #fff;
+          }
+        }
       }
     }
     .select_count {
@@ -109,59 +125,17 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         font-size: 1.2rem;
       }
     }
-    .shop-head{
-      padding: 10px/$ppr;
-      background: white;
-      .head-with{
-        display: flex;
-      }
-      & li{
-        flex: 1;
-        &.shop-a{
-          max-width: 80px/$ppr;
-          border: 1px solid #e7e7e7;
-          & img{
-            width: 100%;
-          }
-        }
-        &.shop-b{
-          font-size: 1.4rem;
-          margin-left: 10px/$ppr;
-          color: #616161;
-        }
-        &.shop-bt{
-          border: 1px solid #d4d4d4;
-          height: 40px/$ppr;
-          line-height: 40px/$ppr;
-          font-size: 1.4rem;
-          text-align: center;
-          border-radius: 2px;
-          &.b-left{
-            margin-right: .25rem;
-          }
-          &.b-right{
-            margin-left: .25rem;
-          }
-        }
-      }
-      .shop-state{
-        padding: .6rem;
-        & li{
-          text-align: center;
-          font-size: 1.2rem;
-        }
-      }
-    }
   }
   .fixed-bottom{
     height: 60px/$ppr;
     background: #fff;
     overflow: hidden;
     .five-cart{
-      height: 60px/$ppr;
-      line-height: 60px/$ppr;
+      height: 55px/$ppr;
+      line-height: 55px/$ppr;
       position: fixed;
       width: 100%;
+      max-width: 800px;
       display: flex;
       z-index: 100;
       box-shadow: 0px 2px 8px #b3b3b3;
@@ -177,11 +151,12 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           height: 100%;
           float: left;
           text-align: center;
-          line-height: 25px/$ppr;
+          line-height: 24px/$ppr;
           & .icon_f{
             display: block;
-            margin-top: 5px/$ppr;
-            font-size: 1.6rem;
+            color: #696969;
+            margin-top: 6px/$ppr;
+            font-size: 2rem;
           }
         }
       }
@@ -194,17 +169,17 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           height: 100%;
           float: left;
           text-align: center;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           color: #fff;
           & a{
             color: #fff;
           }
         }
         .join{
-          background: #ffb03f;
+          background: #ffd600;
         }
         .buy{
-          background: #f23030;
+          background: #FF3B84;
         }
       }
     }

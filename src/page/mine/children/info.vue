@@ -183,7 +183,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         height: 66px/$ppr;
         line-height: 3.25rem;
         background: white;
-        border: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
         &:last-child{
 
         }

@@ -62,29 +62,39 @@ export default{
   
 </script>
 
-<style lang="sass">
-.count-two
-  font-size: 0
-  .bt-count
-    display: inline-block
-    background: red
-    width: 2rem
-    height: 2rem
-    line-height: 2rem
-    text-align: center
-    border-radius: 50%
-    color: white
-    font-size: 1.4rem
-  .number
-    display: inline-block
-    padding: 0 .2rem
-    font-size: 1.4rem
-    & input
-      display: inline-block
-      width: 3rem
-      height: 2rem
-      line-height: 2rem
-      font-size: 1.4rem
-      text-align: center
-      outline: none
+<style lang="scss">
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
+.count-two{
+  font-size: 0;
+  .bt-count{
+    display: inline-block;
+    background: #e4e4e4;
+    width: 32px/$ppr;
+    height: 32px/$ppr;
+    line-height: 32px/$ppr;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.4rem;
+    &:active{
+      background: #B9B9B9;
+    }
+  }
+  .number{
+    display: inline-block;
+    padding: 0 .2rem;
+    font-size: 1.8rem;
+    & input{
+      display: inline-block;
+      width: 3rem;
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1.4rem;
+      text-align: center;
+      outline: none;
+    }
+  }
+}
 </style>

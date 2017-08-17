@@ -34,6 +34,9 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
+$ppr: 12px/1rem; // 样式的rem按照12px进行转换
+
 @keyframes tipMove{
    0%   { transform: scale(1) }
    35%  { transform: scale(.8) }
@@ -50,7 +53,7 @@ export default{
   background: rgba(0, 0, 0, 0.4);
   .inquiry-alert{
     width: 70%;
-    height: 6.5rem;
+    height: 140px/$ppr;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,7 +62,7 @@ export default{
     margin: auto;
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.8);
-    padding: .75rem 1rem;
+    padding: 15px/$ppr;
     animation: tipMove .4s;
     .alert-layer{
       position: relative;
@@ -74,16 +77,17 @@ export default{
           flex: 1;
           text-align: center;
           color: white;
-          font-size: .9rem;
-          padding: 0rem .25rem;
+          font-size: 1.4rem;
+          padding: 0rem 5px/$ppr;
           box-sizing: border-box;
           & button{
             background: #6f6f6f;
             color: white;
             display: block;
             width: 100%;
-            height: 1.9rem;
+            height: 50px/$ppr;
             border-radius: 6px;
+            font-size: 1.6rem;
           }
         }
         & .right{
@@ -93,11 +97,11 @@ export default{
         }
       }
       .alertText{
-        font-size: 1rem;
+        font-size: 1.6rem;
         text-align: center;
         color: white;
-        padding: .5rem 0;
-        line-height: 1.1rem;
+        padding: 10px/$ppr 0;
+        line-height: 24px/$ppr;
       }
     }
   }

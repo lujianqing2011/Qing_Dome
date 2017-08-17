@@ -1,6 +1,6 @@
 <template>
   <div class="mine-page">
-    <header-top header-title="我的" goBack="true" header-nav="true"></header-top>
+    <header-top header-title="我的" goBack="true" header-nav="true" class="use_color"></header-top>
     <section class="mine_box">
       <div class="user-info">
         <div class="user-basic">
@@ -43,7 +43,7 @@
       <div class="order-state">
         <div class="slide-link" ><img class="here-icon" src="../../assets/mine/icon-001.png">培训活动中心<em>查看全部</em></div>
         <div class="slide-link" ><img class="here-icon" src="../../assets/mine/icon-002.png">活动公告<em>查看全部公告</em></div>
-        <div class="slide-link" ><img class="here-icon" src="../../assets/mine/icon-003.png">秒杀商品<em>查看全部商品</em></div>
+        <div class="slide-link" ><img class="here-icon" src="../../assets/mine/icon-003.png">限时商品<em>查看全部商品</em></div>
         <div class="slide-link" ><img class="here-icon" src="../../assets/mine/icon-004.png">账户中心<em></em></div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 <template>
 <section class="search-goods-page">
-  <header-top header-nav="true" goBack="true">
+  <header-top header-nav="true" goBack="true" style="border: none;">
     <section slot="seek" class="header-seek">
       <router-link to="/index/searchTerms">
         <input type="text" class="seek-input" v-model="keyword" placeholder="请输入要搜索的商品" >
@@ -199,6 +199,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     width: 100%;
     height: 40px/$ppr;
     border-radius: 2rem;
+    border: 1px solid #EAEAEA;
     padding: 0 10px/$ppr 0 36px/$ppr;
     flex: 1;
     font-size: 1.4rem;
@@ -210,7 +211,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     white-space: nowrap;
     overflow-x: hidden;
     &::-webkit-input-placeholder{
-      color: #a9a9a9;
+      color: #c3c3c3;
     }
   }
 }
@@ -229,15 +230,16 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .filter_content{
       display: flex;
       align-items: center;
-      background-color: #FF3B84;
+      background-color: #f9fafd;
       // border-bottom: 1px solid #FFD4E4;
       // box-shadow: 0px 0px 5px #FF72A6;
       .filter_class{
         flex: 1;
+        line-height: 28px/$ppr;
         padding: 10px/$ppr 0;
         text-align: center;
         font-size: 1.4rem;
-        color: white;
+        color: #000;
         cursor: pointer;
         .class_list {
           position: absolute;
@@ -354,8 +356,8 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   .border_bottom{
     width: 100%;
     height: 1px;
-    background: #FFD4E4;
-    box-shadow: 0px 0px 5px #FF72A6;
+    background: #ECECEC;
+    box-shadow: 0px 0px 5px #D8D8D8;
   }
   .goods_content{
     margin-top: 5px/$ppr;

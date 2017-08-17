@@ -132,13 +132,14 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     font-size: 1.4rem;
     font-weight: 700;
     box-sizing: border-box;
+    border: 1px solid #EAEAEA;
     margin: auto;
     font-family: "Microsoft Yahei";
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow-x: hidden;
     &::-webkit-input-placeholder{
-      color: #a9a9a9;
+      color: #c3c3c3;
     }
   }
 }
@@ -182,13 +183,13 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     }
   }
   .clear_button{
-    font-size: 1.4rem;
-    width: 150px/$ppr;
+    font-size: 1.6rem;
+    width: 200px/$ppr;
     padding: 10px/$ppr 0;
     text-align: center;
-    color: #c7c7c7;
+    color: #383838;
     border-radius: 20rem;
-    border: solid 1px #e0e0e0;
+    border: solid 1px #8C8C8C;
     margin: 20px/$ppr auto 0;
   }
 }

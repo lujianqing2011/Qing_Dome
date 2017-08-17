@@ -3,11 +3,12 @@
 	  <div class="nav">
 	    <ul class="nav-list">
 	      <router-link
-	      v-for = " list in navLi "
+	      v-for = " (list,index) in navLi "
 	      :to = " { path:list.path }"
         :key="list.id"   
-	      tag = "li" > 
-        <i class="iconfont nav-icon" v-html="list.icon"></i>
+	      tag = "li"
+        @click.native="gg(index)">
+        <i class="iconfont nav-icon animated" :class="{'bounceIn':index===fg}" v-html="list.icon"></i>
         {{ list.liName }}
 	      </router-link>
 	    </ul>
@@ -19,8 +20,14 @@
 <script>
 
 export default {
+  methods: {
+    gg(index) {
+      this.fg = index
+    }
+  },
   data(){
     return{
+      fg: null,
       navLi:[
         {
           liName: '首页',
@@ -58,7 +65,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     max-width: 800px;
     min-width: 320px;
     margin: 0 auto;
-    height: 54px/$ppr;
+    height: 58px/$ppr;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -68,7 +75,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     overflow-x: hidden;
     .nav-list{
       height: 100%;
-      line-height: 22px/$ppr;
+      line-height: 25px/$ppr;
       display: flex;
       & > li{
         flex: 1;
@@ -76,16 +83,15 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         cursor: pointer;
         font-size: 1.2rem;
         color: #777;
-        background-color: white;
-        font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
+        background-color: rgba(246,246,246,.95);
         &.router-link-exact-active, &:hover{
           color: #FF3B84;
         }
         .nav-icon{
           width: 100%;
           display: block;
-          font-size: 1.8rem;
-          margin-top: 8px/$ppr;
+          font-size: 2.2rem;
+          margin-top: 7px/$ppr;
           margin-bottom: 1px/$ppr;
         }
       }
@@ -93,7 +99,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   }
   .null{
     width: 100%;
-    height: 54px/$ppr;
+    height: 58px/$ppr;
     background-color: #fff;
   }
 }

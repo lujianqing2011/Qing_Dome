@@ -1,23 +1,20 @@
 <template>
   <div class="details-page">
     <header-top header-title="详情页" goBack="true" header-nav="true"></header-top>
+    <div id="load_img_state"></div>
     <swiper :options="swiperDetail" class="swiper_detail">
       <swiper-slide>
         <div class="details-basic d_top">
           <m-banner :banner="banner"></m-banner>
           <div class="details-box">
-            <div class="details-title">{{goodsName}}</div>
-            <div class="product-subname">人气热荐夏装款,出街凹造型,立即抢购</div>
+            <div class="d_title">{{goodsName}}</div>
             <div class="price">{{goodsPrice}}</div>
-            <div class="cost">原价:¥{{goodsOriginal}}</div>
+            <div class="cost">
+              <span class="c_cost">原价:¥{{goodsOriginal}}</span>
+              <span class="c_freight">运费: {{goods_freight}}</span>
+            </div>
           </div>
-          <div class="flex-box">
-            <div class="flex-1">正品保障</div>
-            <div class="flex-1">货到付款</div>
-            <div class="flex-1">七天退货</div>
-          </div>
-          <div class="select">运费: {{goods_freight}}</div>
-          <div class="select" @click="showSelect">选择：{{radioSize}} {{radioColor}} {{radioEtalon}} {{goodsCount}}件</div>
+          <div class="select" @click="showSelect">选择: {{radioSize}} {{radioColor}} {{radioEtalon}} {{goodsCount}}件</div>
           <div class="select_box" v-show="selectBoxShow">
             <h2 class="title-h2">尺寸</h2>
             <div class="radio_module">
@@ -52,29 +49,16 @@
           <div class="select_count">
             <h2 class="title-h2">数量</h2>
             <m-count-two :min="1" :max="20" @on-change="changeCount($event)"></m-count-two>
-          </div>
-          <div class="shop-head">
-            <ul class="head-with">
-              <li class="shop-a"><img src="../../assets/pic.jpg"></li>
-              <li class="shop-b">D1美财网亲朋的店</li>
-            </ul>
-            <ul class="head-with shop-state">
-              <li>描述相符：4.8</li>
-              <li>描述相符：4.8</li>
-              <li>描述相符：4.8</li>
-            </ul>
-            <ul class="head-with">
-              <li class="shop-bt b-left">全部商品</li>
-              <li class="shop-bt b-right">进入店铺</li>
-            </ul>
-          </div>
-          
+          </div>          
         </div>
       </swiper-slide>
 
       <swiper-slide>
         <div class="details-images d_top">
           <img v-for="img in goodsImg" :src="img">
+          <img src="http://img01.bqstatic.com/upload/goods/201/707/2718/20170727183427_484519.jpg@500w_500h_90Q">
+          <img src="http://img01.bqstatic.com/upload/goods/201/707/2718/20170727183329_105026.jpg@500w_500h_90Q">
+          <img src="http://img01.bqstatic.com/upload/goods/201/707/0417/20170704171250_891905.jpg@355w_355h_90Q">
         </div>
       </swiper-slide>
 
@@ -89,8 +73,8 @@
     <div class="fixed-bottom">
       <div class="five-cart">
         <div class="flex-1">
-          <div class="two"><i class="iconfont icon_f">&#xe8be;</i>收藏</div>
-          <div class="three"><i class="iconfont icon_f">&#xe625;</i>购物车</div>
+          <div class="two"><i class="iconfont icon_f">&#xe606;</i>收藏</div>
+          <div class="three"><i class="iconfont icon_f">&#xe6a1;</i>购物车</div>
         </div>
         <div class="flex-2">
           <div class="join" @click="addToCart()">加入购物车</div>
@@ -136,11 +120,38 @@ export default {
   computed: {
   },
   mounted() {
+    this.$nextTick(() => {
+      this.loadImg();
+    })
   },
   methods: {
     ...mapMutations([
       'ADD_CART'
     ]),
+    //加载页面图片的进度
+    loadImg() {
+      let loadState = document.getElementById('load_img_state');
+      let img = document.getElementsByTagName('img');
+      let imgLength = img.length;
+      let count = 0;
+      let index = 0;
+      for(let i=0; img.length>i; i++) {
+        img[i].onload = ()=> {
+          this.baifenbi = Math.round((count+1) / imgLength * 100) + '%'
+          count++;
+          loadState.style.width = this.baifenbi
+          count === imgLength ? loadState.style.opacity = "0":loadState.style.opacity = "1";
+          this.$nextTick(() => {
+            //定时300毫秒后隐藏进度条
+            let setTime = setTimeout(() => {
+              parseInt(this.baifenbi) === 100 ? loadState.style.display = "none":loadState.style.display = " ";
+              clearTimeout(setTime);
+            },300)
+          })
+        }
+      }
+      
+    },
     //加入购物车，所需5个参数,分类id，商品id，商品名字，商品价格，商品规格
     addToCart() {
       this.showAlert = true
@@ -268,6 +279,7 @@ export default {
   },
   data(){
     return{
+      baifenbi: 0,
       typesId: null,      //商品分类id
       goodsId: null,      //商品ID
       goodsName: null,    //商品名字
@@ -302,6 +314,10 @@ export default {
         }
       },
       banner: [
+        {
+          bannerimg: require('../../assets/details/banner0.jpg'),
+          imgSrc: 'http:baidu.com'
+        },
         {
           bannerimg: require('../../assets/details/banner1.jpg'),
           imgSrc: 'http:baidu.com'
@@ -363,7 +379,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       text-align: center;
       line-height: 48px/$ppr;
       color: #000;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       border-radius: 0 !important;
       background: #fff !important;
       opacity: 1 !important;
@@ -371,7 +387,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
       color: #FF3B84;
       background: #03a9f4;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -393,23 +409,6 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   }
 }
 
-.radio_module{
-  font-size: 0;
-  & label[name="radio"]{
-    display: inline-block;
-    background: #eaeaea;
-    padding: 6px/$ppr 10px/$ppr;
-    font-size: 1.2rem;
-    margin: .25rem .5rem .25rem 0;
-    color: white;
-    border-radius: 4px;
-    color: #696969;
-    &.on{
-      background: red;
-      color: #fff;
-    }
-  }
-}
 
 @import 'details';
 

@@ -7,7 +7,7 @@
     <span class="type-bt negative" :class="{'on':selectTypeBt === 0 }" @click="select(0,$event)" > {{desc.negative}} {{negative.length}}</span>
   </div>
   <div class="switch">
-    <span class="screen-icon" @click="toggleContent()" :class="{'on':selectCentent}">√</span>
+    <span class="screen-icon iconfont" @click="toggleContent()" :class="{'on':selectCentent}">&#xe674; </span>
     <span class="switch-screen">只看有图片的</span>
   </div>
   <ul class="content">
@@ -22,10 +22,11 @@
         <span>{{item.content}}</span>
       </div>
       <div class="user-img">
-        <img v-for="img in item.pic" v-if="img" :src="img">
+        <img v-for="(img,index) in item.pic" v-if="img" :src="img" @click="showBagImg(index)">
       </div>
     </li>
   </ul>
+  <div class="bg_black" v-show="showBg"></div>
 </div>
 
 </template>
@@ -38,13 +39,15 @@ const ALL = 2
 
 export default{
   methods: {
+    //根据按钮赋值
     select(type, event) {
       this.selectTypeBt = type
-      console.log(type)
     },
+    //高亮只查看有图片的按钮
     toggleContent(event) {
       this.selectCentent = !this.selectCentent
     },
+    //判断的键值的类型的是否跟内容的type相等，返回true就能显示相关的信息
     needShow(type, pic) {
       if (this.selectCentent && !pic.length){   //显示有图片的评论
         return false
@@ -54,6 +57,10 @@ export default{
       }else {
         return type === this.selectTypeBt
       }
+    },
+    //显示评价大图浏览
+    showBagImg(index) {
+      this.showBg = true
     }
   },
   mounted(){
@@ -104,7 +111,8 @@ export default{
   data() {
     return{
       selectTypeBt: this.selectType,
-      selectCentent: false
+      selectCentent: false,
+      showBg: false
       // selectCentent: this.onlyContent
     }
   }
@@ -120,11 +128,14 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 
   .evaluate-type {
     padding: 0rem 10px/$ppr;
+    font-size: 0;
     & .type-bt {
       display: inline-block;
-      padding: 5px/$ppr 10px/$ppr;
+      padding: 6px/$ppr 15px/$ppr;
       color: white;
+      border-radius: 20rem;
       font-size: 1.2rem;
+      margin: 10px/$ppr 8px/$ppr 0 0;
       &.all {
         background: #427CFD;
         &.on {
@@ -149,24 +160,21 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     font-size: 0;
     border-bottom: 1px solid #ececec;
     padding: 15px/$ppr 10px/$ppr;
+    height: 30px/$ppr;
+    line-height: 30px/$ppr;
     .screen-icon {
       display: inline-block;
-      width: 25px/$ppr;
-      height: 25px/$ppr;
-      line-height: 25px/$ppr;
       text-align: center;
       border-radius: 50%;
-      font-size: 1.2rem;
-      color: white;
-      background: #a0a0a0;
+      font-size: 2.2rem;
+      color: #000;
       margin-right: 10px/$ppr;
       &.on {
-        background: #36CA56;
+        color: #36CA56;
       }
     }
     .switch-screen {
       display: inline-block;
-      line-height: 25px/$ppr;
       font-size: 1.4rem;
     }
   }
@@ -179,12 +187,12 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         border-bottom: none;
       }
       .user-message {
-        height: 30px/$ppr;
-        line-height: 30px/$ppr;
+        height: 40px/$ppr;
+        line-height: 40px/$ppr;
         font-size: 0;
         & img {
-          width: 30px/$ppr;
-          height: 30px/$ppr;
+          width: 40px/$ppr;
+          height: 40px/$ppr;
           border-radius: 50%;
           display: inline-block;
         }
@@ -206,15 +214,25 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         font-size: 1.4rem;
       }
       .user-img {
-        padding-left: .15rem;
+        padding-left: 5px/$ppr;
         & img {
-          width: 2.5rem;
-          height: 2.5rem;
+          width: 50px/$ppr;
+          height: 50px/$ppr;
           border: 1px solid #eee;
-          margin-right: .4rem;
+          margin-right: 10px/$ppr;
         }
       }
     }
+  }
+  .bg_black{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
   }
 }
 

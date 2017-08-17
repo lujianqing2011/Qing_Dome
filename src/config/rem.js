@@ -7,7 +7,7 @@
             if (!clientWidth) return;
             docEl.style.fontSize = 10 * (clientWidth / 320) + 'px';
             if (clientWidth >= 800)
-            docEl.style.fontSize = 15 + 'px';
+            docEl.style.fontSize = 25 + 'px';
         };
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);

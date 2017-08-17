@@ -1,7 +1,7 @@
 <template>
 
 <div class="gold-page">
-  <header-top header-title="我的金币" goBack="true"></header-top>
+  <header-top header-title="我的金币" goBack="true" class="use_color"></header-top>
   <section class="gold-box">
     <section class="gold-content">
       <div class="content-head clearfix">
@@ -60,7 +60,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     width: 100%;
     background: #FF3B84;
     box-sizing: border-box;
-    padding: 5px/$ppr 10px/$ppr 10px/$ppr;
+    padding: 0 10px/$ppr 10px/$ppr;
     .gold-content{
       background: white;
       border-radius: 4px;

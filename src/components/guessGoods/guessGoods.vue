@@ -74,37 +74,39 @@ export default{
         })
       })
     },
-    //返回顶部
-    backTop(){
-      var timer = setInterval(function() {
-          window.scrollBy(0, -50);
-          if (document.body.scrollTop == 0) {
-              clearInterval(timer);
-          };
-      }, 5);
-    },
+    
     //显示置顶按钮
     scrollFuc() {
       document.addEventListener('scroll',() => {
-        showBackFun()
+        showBackFun();
       },false)
-      //判断滚动的距离是否大于500
+      //判断滚动的距离是否大于可视区
       const showBackFun = () => {
-        if(document.body.scrollTop > 1500) {
-          this.showbackTop = true
+        let scrollToTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let clientHeight = document.documentElement.clientHeight;
+        if(scrollToTop > clientHeight) {
+          this.showbackTop = true;
         }else{
-          this.showbackTop = false
+          this.showbackTop = false;
         }
       }
-      //加载更多数据
-      // const moreGoods = () => {
-      //   let winHeight = window.screen.height;   //屏幕分辨率的高
-      //   let bodyHeight = document.body.scrollHeight; //文档的总高度
-      //   //let offTop = this.$refs.scrollOffsetTop.offsetTop;    //商品列表距离顶部的距离
-      //   let scrTop = document.body.scrollTop;   //滚动的高度
-      //   console.log( scrTop )
-      // }
+    },
+
+    //返回顶部
+    backTop(){
+      let scrollToTop = document.documentElement.scrollTop || document.body.scrollTop;
+      if(scrollToTop > 0) {
+        this.speed += 50;
+        document.documentElement.scrollTop = document.body.scrollTop = scrollToTop - this.speed;
+        let setTime = setTimeout(()=>{
+          this.backTop()
+          clearTimeout(setTime)
+        },40)
+      }else{
+        this.speed = 10
+      }
     }
+
   },
   mounted() {
     this.$nextTick(() => {
@@ -113,6 +115,7 @@ export default{
   },
   data(){
     return{
+      speed: 10,
       offset: 0,            //加载数据数量
       allGoodsList: [],     //所有商品
       showbackTop: false,   //显示置顶按钮
@@ -142,8 +145,8 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   }
   .box-li{
     float: left;
-    width: 49.33%;
-    margin-bottom: 4px/$ppr;
+    width: 49.85%;
+    margin-bottom: 1px/$ppr;
     &:nth-of-type(2n){
       float: right;
     }
@@ -154,17 +157,20 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       background-size: 40%;
       & img{
         width: 100%;
+        height: 100%;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
+        transition: all 0.5s;
       }
     }
     .box{
-      padding: 5px/$ppr;
+      padding: 10px/$ppr;
       background: white;
       & h3{
         font-size: 1.2rem;
-        line-height: 1.2rem;
+        line-height: 24px/$ppr;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;

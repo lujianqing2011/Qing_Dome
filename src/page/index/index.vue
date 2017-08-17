@@ -1,6 +1,6 @@
 <template>
   <div class="app-index">
-    <header-top header-nav="true">
+    <header-top header-nav="true" useColor="true" class="use_color">
       <section slot="logo" class="header-logo"></section>
       <section slot="seek" class="header-seek">
         <router-link to="/index/searchTerms">
@@ -48,7 +48,7 @@
         </span>
         <a class="more" href="javascript:;">更多</a>
       </div>
-      <div class="module">
+      <div class="module" id="mmm">
         <div class="width_1"></div>
         <div class="seckill_time">
           <img src="../../assets/index/and-v-03222.jpg">
@@ -249,7 +249,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     white-space: nowrap;
     overflow-x: hidden;
     &::-webkit-input-placeholder{
-      color: #a9a9a9;
+      color: #c3c3c3;
     }
   }
 

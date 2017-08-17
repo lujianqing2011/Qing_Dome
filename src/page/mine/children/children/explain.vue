@@ -1,7 +1,7 @@
 <template>
 
 <section class="explain_page">
-  <header-top header-title="说明" goBack="true"></header-top>
+  <header-top header-title="说明" goBack="true" class="use_color"></header-top>
   <section class="explain_box">
     <state></state>
   </section>
@@ -31,6 +31,7 @@ export default{
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   .explain_box{
     width: 100%;
     height: 100%;

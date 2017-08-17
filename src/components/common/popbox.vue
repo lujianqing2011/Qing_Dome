@@ -72,7 +72,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     height: 54px/$ppr;
     line-height: 54px/$ppr;
     .alertText{
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       text-align: center;
       color: white;
     }

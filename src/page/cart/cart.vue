@@ -1,9 +1,6 @@
 <template>
   <div class="acart-page">
-    <header-top header-title="购物车" goBack="true">
-      <section slot="edit" @click="goodsEdit()" v-if="!showEdit">编辑</section>
-      <section slot="edit" @click="goodsFinish()" v-else >完成</section>
-    </header-top>
+    <header-top header-title="购物车" header-nav="true" goBack="true"></header-top>
     <div class="acart-box">
       <div class="acart-goods" v-for="(goods,index) in cartGoods">
         <div class="item">
@@ -12,7 +9,7 @@
             <div class="left" date-src="goods.goods_pic">
               <img :src="goods.goods_pic">
             </div>
-            <div class="right" v-show="!showEdit">
+            <div class="right" v-show="index !== compileIndex">
               <router-link :to="{path:'/details', query:{ goods_name:goods.goods_name, goods_price:goods.goods_price }}">
                 <h2>{{goods.goods_name}}</h2>
               </router-link>
@@ -21,16 +18,18 @@
               </div>
               <div class="price-count">
                 <span class="price">{{goods.goods_price}}</span>
-                <div class="count-right">×{{goods.goods_count}}</div>
+                <span class="count">× {{goods.goods_count}}</span>
+                <span class="edit_right iconfont" @click="goodsEdit(index)">&#xe61b;</span>
               </div>
             </div>
-            <div class="edit_goods" :class="{on: showEdit}">
+            <div class="edit_goods" :class="{on: index === compileIndex }">
                 <div class="count_goods">
                   <div class="count">
                     <a class="count_bt" href="javascript:;" @click="dealCount('minus',goods, goods.goods_id, index)">-</a>
                     <a class="count_number" href="javascript:;">{{goods.goods_count}}</a>
                     <a class="count_bt" href="javascript:;" @click="dealCount('add',goods, goods.goods_id, index)">+</a>
                   </div>
+                  <div class="call_off"><span @click="finishCompile(index)">完成</span></div>
                 </div>
               <div class="delete_goods" @click="delectGoods(goods,index)">删除</div>
             </div>
@@ -46,7 +45,7 @@
         <div class="total-price">
           <div class="left">
             <div class="amount">
-              <div class="pic iconfont" :class="{ highlight:count>0 }">&#xe60c;<i class="number">{{count}}</i></div>
+              <div class="pic iconfont" :class="{ highlight:count>0 }">&#xe654;<i class="number">{{count}}</i></div>
             </div>
             <div class="price">
               <div class="price_j">{{totalMoney}}</div>
@@ -98,7 +97,8 @@ export default {
       goods_freight: 0,     //配送费
       clearingGoods: [],  //已选择要购买的商品
       cartGoods: [],   //购物车列表
-      goConfirmOrderShow: false
+      goConfirmOrderShow: false,
+      compileIndex: null
       
     }
   },
@@ -246,22 +246,24 @@ export default {
     /**
      * 商品编辑
      */
-    goodsEdit() {
-      this.showEdit = true
+    goodsEdit(index) {
+      this.compileIndex = index
     },
 
     /**
      * 完成编辑
      */
-    goodsFinish() {
-      this.showEdit = false
-    },
+     finishCompile() {
+      this.compileIndex = null
+     },
+
     /**
      * 商品删除
      */
     delectGoods(goods,index) {
       this.cartGoods.splice(index,1);   //从购物车列表删除
       this.clearingGoods.splice(index,1);   //从已选的商品列表删除
+      this.compileIndex = null;
       this.countMoney()
     }
 
