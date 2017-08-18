@@ -256,7 +256,7 @@ export default {
     detailsChoice() {
       if(this.radioSize === null ) {
         this.selectBoxShow = true
-        this.alertText = '请选择尺寸111111111111111111111111111'
+        this.alertText = '请选择尺寸'
         return  
       }else if(this.radioEtalon === null ){
         this.alertText = '请选择规格'
