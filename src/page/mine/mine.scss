@@ -1,5 +1,9 @@
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
 
 .mine-page{
   height: 100%;
@@ -55,7 +59,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           flex: 1;
           margin: 10px/$ppr 0;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: $size2;
           color: white;
           border-right: 1px solid #e8e8e8;
           &:last-child{
@@ -74,7 +78,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       margin-bottom: 8px/$ppr;
       .slide-link{
         padding: 0 7% 0 44px/$ppr;
-        font-size: 1.4rem;
+        font-size: $size3;
         position: relative;
         background: url('../../assets/rightarrow_new.png') no-repeat 97% center;
         background-size: 8px/$ppr;
@@ -96,7 +100,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         & em{
           float: right;
           display: inline-block;
-          font-size: 1.2rem;
+          font-size: $size2;
           color: #999;
         }
       }
@@ -118,7 +122,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           text-align: center;
           padding: 36px/$ppr 0 10px/$ppr 0;
           color: #4d525d;
-          font-size: 1.2rem;
+          font-size: $size2;
           background-size: 24px/$ppr;
           & i{
             position: absolute;

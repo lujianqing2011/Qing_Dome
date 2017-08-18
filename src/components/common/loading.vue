@@ -31,7 +31,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 20;
+  z-index: 9999;
   .shade{
     position: relative;
     width: 100%;

@@ -79,12 +79,6 @@ export default{
     }
   },
   props: {
-    goodsCommentTwo: {
-      type: Array,
-      default(){
-        return []
-      }
-    },
     selectType: {
       type: Number,
       default: ALL
@@ -167,7 +161,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       text-align: center;
       border-radius: 50%;
       font-size: 2.2rem;
-      color: #000;
+      color: #c3c3c3;
       margin-right: 10px/$ppr;
       &.on {
         color: #36CA56;

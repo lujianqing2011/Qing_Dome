@@ -16,7 +16,8 @@
           <i class="iconfont" :class="{ sort_icon:sortIcon === 'sales' }">&#xe60e;</i>
         </div>
         <section class="class_list" v-show="sortIcon==='sales'">
-          12313
+          <p>价格从低到高</p>
+          <p>价格从高到低</p>
         </section>
       </div>
       <div class="filter_class">
@@ -25,7 +26,8 @@
           <i class="iconfont" :class="{ sort_icon:sortIcon === 'price' }">&#xe60e;</i>
         </div>
         <section class="class_list" v-show="sortIcon==='price'">
-          79797912313
+          <p>销售量从低到高</p>
+          <p>销售量从高到低</p>
         </section>
       </div>
       <div class="filter_class show_list">
@@ -117,14 +119,12 @@ export default{
   },
   methods: {
     chooseType(type) {      //点击顶部选项
-
       if(this.sortIcon !== type){     //第一次展开  
         this.sortIcon = type
       }else{                      //第二次收缩
         this.sortIcon = ''
         this.filtrateShow = false
       }
-      
     },
     selectCategory(index) {
       this.categoryType = index;
@@ -164,59 +164,6 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   transform: translateX(100%);
 }
 
-// 顶部插入的样式S
-.header-logo{
-  width: 100%;
-  height: 54px/$ppr;
-  background: url('../../components/header/d1mcw-logo.png') no-repeat center center;
-  background-size: 75%;
-}
-.header-seek{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  box-sizing: border-box;
-  & > a{
-    width: 100%;
-  }
-  &:before {
-    content: ' ';
-    width: 22px/$ppr;
-    height: 22px/$ppr;
-    background: url('../../components/header/icon_seek.png') no-repeat center center;
-    background-size: 100%;
-    position: absolute;
-    left: 8px/$ppr;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    margin: auto 0;
-  }
-  .seek-input {
-    display: block;
-    width: 100%;
-    height: 40px/$ppr;
-    border-radius: 2rem;
-    border: 1px solid #EAEAEA;
-    padding: 0 10px/$ppr 0 36px/$ppr;
-    flex: 1;
-    font-size: 1.4rem;
-    font-weight: 700;
-    box-sizing: border-box;
-    margin: auto;
-    font-family: "Microsoft Yahei";
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow-x: hidden;
-    &::-webkit-input-placeholder{
-      color: #c3c3c3;
-    }
-  }
-}
-// 顶部插入的样式E
-
 .search-goods-page{
   position: absolute;
   top: 0;
@@ -243,11 +190,13 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         cursor: pointer;
         .class_list {
           position: absolute;
-          top: 45px/$ppr;
+          top: 48px/$ppr;
           left: 0;
           width: 100%;
-          height: 100px;
-          background: red;
+          line-height: 30px/$ppr;
+          padding: 10px/$ppr 0;
+          background-color: #F0F2F7;
+          border-bottom: 1px solid #efefef;
         }
         & i{
           display: inline-block;
@@ -265,7 +214,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         }
         .class_list{
           position: absolute;
-          top: 45px/$ppr;
+          top: 48px/$ppr;
           left: 0;
           z-index: 1;
           width: 100%;
@@ -365,10 +314,10 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .goods_main{
       .goods_box{
         .goods_list{
-          width: 49.333%;
+          width: 49.85%;
           float: left;
           background: white;
-          margin-bottom: 1.222%;
+          margin-bottom: 1px/$ppr;
           &:nth-of-type(2n){
             float: right;
           }
@@ -379,16 +328,18 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
               background: #ccc;
               & img{
                 width: 100%;
+                height: 100%;
+                display: block;
                 position: absolute;
                 top: 0;
                 left: 0;
               }
             }
             .goods_info{
+              padding: 10px/$ppr;
               background: white;
               .info{
-                margin: 5px/$ppr 10px/$ppr 0 10px/$ppr;
-                height: 1.8rem;
+                height: 24px/$ppr;
                 line-height: 24px/$ppr;
                 font-size: 1.2rem;
                 display: box;
@@ -400,11 +351,9 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
                 word-break: break-all;
               }
               .goods_price{
-                padding: 0rem 10px/$ppr;
                 .price{
                   font-size: 1.4rem;
                   display: inline-block;
-                  padding: 0rem 0;
                   color: red;
                 }
                 & del{

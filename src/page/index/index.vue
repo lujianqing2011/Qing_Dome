@@ -10,7 +10,7 @@
     </header-top>
     <!-- <section class="mod_container"> 暂时不用-->
       <!-- Banner-->
-      <m-banner :banner="banner"></m-banner>
+      <m-banner :banner="banner" ></m-banner>
 
       <!-- 广告图S -->
       <div class="dzdt">
@@ -202,57 +202,6 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 .router-slid-enter, .router-slid-leave-active {
   /*transform: translate3d(50px, 0, 0);*/
    opacity: 0;
-}
-
-.header-logo {
-  width: 100%;
-  height: 100%;
-  background: url('../../components/header/d1mcw-logo.png') no-repeat center center;
-  background-size: 84%;
-}
-.header-seek {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  box-sizing: border-box;
-  & > a{
-    width: 100%;
-  }
-  &:before {
-    content: ' ';
-    width: 22px/$ppr;
-    height: 22px/$ppr;
-    background: url('../../components/header/icon_seek.png') no-repeat center center;
-    background-size: 100%;
-    position: absolute;
-    left: 8px/$ppr;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    margin: auto 0;
-  }
-  .seek-input {
-    display: block;
-    width: 100%;
-    height: 40px/$ppr;
-    border-radius: 2rem;
-    padding: 0 10px/$ppr 0 36px/$ppr;
-    flex: 1;
-    font-size: 1.4rem;
-    font-weight: 700;
-    box-sizing: border-box;
-    margin: auto;
-    font-family: "Microsoft Yahei";
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow-x: hidden;
-    &::-webkit-input-placeholder{
-      color: #c3c3c3;
-    }
-  }
-
 }
 
 @import './index.scss';

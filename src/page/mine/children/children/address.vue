@@ -110,6 +110,10 @@ export default{
 <style lang="scss">
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
 
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
@@ -140,26 +144,26 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             font-size: 0;
             & span{
               display: inline-block;
-              font-size: 1.2rem;
+              font-size: $size2;
             }
             .name{
               float: left;
-              font-size: 1.4rem;
+              font-size: $size3;
               font-weight: 700;
             }
             .tel{
               float: right;
-              font-size: 1.2rem;
+              font-size: $size2;
             }
             .detail{
               display: block;
               padding: 6px/$ppr 0;
               clear: both;
-              font-size: 1.2rem;
+              font-size: $size2;
               & em{
                 display: block;
                 line-height: 24px/$ppr;
-                font-size: 1.2rem;
+                font-size: $size2;
               }
             }
           }
@@ -168,11 +172,11 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             border-top: 1px solid #ececec;
             height: 40px/$ppr;
             line-height: 40px/$ppr;
-            font-size: 1.2rem;
+            font-size: $size2;
             & dt{
               float: left;
               width: 55%;
-              font-size: 1.2rem;
+              font-size: $size2;
               box-sizing: border-box;
               padding-left: 32px/$ppr;
               background: url('../../../../assets/icon-meixuanze.png') no-repeat left center;
@@ -185,7 +189,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             & dd{
               float: right;
               text-align: right;
-              font-size: 1.2rem;
+              font-size: $size2;
               width: 45%;
               & a{
                 padding-left: 10px/$ppr;
@@ -210,7 +214,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     & p{
       height: 48px/$ppr;
       line-height: 48px/$ppr;
-      font-size: 1.4rem;
+      font-size: $size4;
       text-align: center;
       background: red;
       border-radius: 4px;

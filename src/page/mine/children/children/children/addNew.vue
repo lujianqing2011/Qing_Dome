@@ -164,6 +164,11 @@ export default{
 <style lang="scss">
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$color: #02DC09;
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
 
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
@@ -180,6 +185,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   bottom: 0;
   right: 0;
   width: 100%;
+  z-index: 100;
   background: #f2f2f2;
   .add-new-page{
     .padding-block{
@@ -238,10 +244,10 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         width: 100%;
         height: 48px/$ppr;
         line-height: 48px/$ppr;
-        background-color: #02D858;
+        background-color: $color;
         border: none;
         outline: none;
-        font-size: 1.4rem;
+        font-size: $size4;
         color: white;
         border-radius: 4px;
         font-family: Microsoft Yahei;

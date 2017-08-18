@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1502984012441'); /* IE9*/
-  src: url('iconfont.eot?t=1502984012441#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1502984012441') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1502984012441') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1502984012441#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1503052797543'); /* IE9*/
+  src: url('iconfont.eot?t=1503052797543#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1503052797543') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1503052797543') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1503052797543#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -58,6 +58,8 @@
 .icon-dianshangfenlei-:before { content: "\e823"; }
 
 .icon-youxiaoqi:before { content: "\e661"; }
+
+.icon-jinbi:before { content: "\e61c"; }
 
 .icon-youjiantou-copy:before { content: "\e99c"; }
 

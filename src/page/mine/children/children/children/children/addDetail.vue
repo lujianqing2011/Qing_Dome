@@ -196,6 +196,10 @@ export default{
 <style lang="scss">
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
 
 .add-detail-page{
   position: absolute;
@@ -222,7 +226,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         text-align: center;
         height: 48px/$ppr;
         line-height: 48px/$ppr;
-        font-size: 1.4rem;
+        font-size: $size3;
         &.active-tab{
           position: absolute;
           left: 0;
@@ -251,7 +255,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           & li{
             height: 48px/$ppr;
             line-height: 48px/$ppr;
-            font-size: 1.4rem;
+            font-size: $size3;
             border-bottom: 1px solid #dcdcdc;
             text-indent: 10px/$ppr;
           }

@@ -60,6 +60,10 @@ export default{
 <style lang="scss">
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
 
 .username-page{
   position: absolute;
@@ -80,7 +84,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         border: 1px solid #e0e0e0;
         border-radius: 4px;
         line-height: 36px/$ppr;
-        font-size: 1.4rem;
+        font-size: $size4;
         padding: 5px/$ppr 10px/$ppr;
         box-sizing: border-box;
         &::-webkit-input-placeholder{
@@ -90,7 +94,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       }
       .name-hint{
         padding: 6px/$ppr 0 25px/$ppr 5px/$ppr;
-        font-size: 1.2rem;
+        font-size: $size2;
       }
     }
   }
@@ -102,7 +106,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       color: white;
       height: 48px/$ppr;
       line-height: 48px/$ppr;
-      font-size: 1.4rem;
+      font-size: $size4;
       font-family: "Microsoft Yahei";
       border-radius: 4px;
       outline: none;

@@ -15,9 +15,18 @@
       </div>
     </section>
   </section>
-  <h2 class="content-h2">金币明细</h2>
+  <h2 class="content-h2">金额明细</h2>
   <section class="content-detail">
-    <div class="detail-box"></div>
+    <div class="detail-title">
+      <span>时间</span>
+      <span>用途</span>
+      <span>数量</span>
+    </div>
+    <div class="detail-content">
+      <span>2017-8-18</span>
+      <span>购买化妆品</span>
+      <span>20</span>
+    </div>
   </section>
 </div>
 
@@ -105,13 +114,34 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   .content-h2{
     padding: 15px/$ppr 10px/$ppr;
     font-size: 1.4rem;
-    color: #a0a0a0;
+    color: #636363;
+    font-weight: 700;
   }
   .content-detail{
-    padding: 0 10px/$ppr 10px/$ppr 10px/$ppr;
-    .detail-box{
-      height: 200px/$ppr;
+    .detail-title{
       background: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid #f2f2f2;
+      & span{
+        flex: 1;
+        font-size: 1.4rem;
+        line-height: 40px/$ppr;
+      }
+    }
+    .detail-content{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      line-height: 40px/$ppr;
+      vertical-align: middle;
+      background-color: white;
+      & span{
+        flex: 1;
+        font-size: 1.2rem;
+        padding: 0 5px/$ppr;
+      }
     }
   }
 }

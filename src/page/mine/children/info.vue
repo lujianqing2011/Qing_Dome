@@ -136,6 +136,11 @@ export default{
 <style lang="scss" scoped>
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
+$size1: 1rem;
+$size2: 1.2rem;
+$size3: 1.4rem;
+$size4: 1.6rem;
+
 
 .router-slid-enter-active, .router-slid-leave-active {
         transition: all .3s;
@@ -169,7 +174,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .title{
       flex: 1;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: $size3;
     }
   }
   .info_main{
@@ -196,12 +201,10 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           opacity: 0;
         }
         .head-name{
-          
-          font-size: 1.2rem;
+          font-size: $size3;
         }
         .head-upload{
-          
-          font-size: 1.2rem;
+          font-size: $size3;
           .portrait{
             width: 48px;
             height: 48px;
@@ -234,7 +237,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           height: 100%;
         }
         .box-h2{
-          font-size: 1.2rem;
+          font-size: $size3;
           color: black;
           display: flex;
           align-items: center;
@@ -243,7 +246,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           }
         }
         .user_name{
-          font-size: 1.2rem;
+          font-size: $size3;
           color: #000;
         }
       }
@@ -251,7 +254,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     .box-title{
       height: 42px/$ppr;
       line-height: 42px/$ppr;
-      font-size: 1.2rem;
+      font-size: $size3;
       color: #777;
       padding: 0 10px/$ppr;
       border-bottom: 1px solid #ddd;
@@ -269,7 +272,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     background: #00C318;
     box-sizing: border-box;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: $size4;
     color: white;
     border-radius: 4px;
   }

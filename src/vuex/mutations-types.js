@@ -1,2 +1,5 @@
 export const GET_USERINFO = 'GET_USERINFO'
 export const PAY_COUNT = 'PAY_COUNT'
+export const USER_INFO = 'USER_INFO'
+export const RETSET_NAME = 'RETSET_NAME'
+export const ADD_CART = 'ADD_CART'

@@ -129,7 +129,67 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
         font-weight: 700;
       }
     }
+    //首页的logo
+    .header-logo {
+      width: 100%;
+      height: 100%;
+      background: url('../../components/header/d1mcw-logo.png') no-repeat center center;
+      background-size: 84%;
+    }
+    //搜索框
+    .header-seek {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      box-sizing: border-box;
+      & > a{
+        width: 100%;
+      }
+      &:before {
+        content: ' ';
+        width: 22px/$ppr;
+        height: 22px/$ppr;
+        background: url('../../components/header/icon_seek.png') no-repeat center center;
+        background-size: 100%;
+        position: absolute;
+        left: 8px/$ppr;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        margin: auto 0;
+      }
+      .seek-input {
+        display: block;
+        width: 100%;
+        height: 40px/$ppr;
+        border-radius: 2rem;
+        border: 1px solid #EAEAEA;
+        padding: 0 10px/$ppr 0 36px/$ppr;
+        flex: 1;
+        font-size: 1.4rem;
+        font-weight: 700;
+        box-sizing: border-box;
+        margin: auto;
+        font-family: "Microsoft Yahei";
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+        &::-webkit-input-placeholder{
+          color: #c3c3c3;
+        }
+      }
+    }
+    //搜索
+    .search_bt{
+      font-size: 1.4rem;
+      & a{
+        color: white;
+      }
+    }
   }
+  //头部导航处
   .header-nav{
     display: flex;
     background-color: #f9fafd;
@@ -157,6 +217,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       }
     }
   }
+  //以下是有颜色的头部样式修改
   &.use_color{
     background-color: #FF3B84!important;
     border: none!important;

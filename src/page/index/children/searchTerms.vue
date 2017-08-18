@@ -60,17 +60,20 @@ export default{
       let keyTitle = item;
       this.$router.push({path:'/searchGood', query:{key:keyTitle}})   //传递关键字
     },
-    clearSeek() {   //点击清除搜索记录
+    //点击清除搜索记录
+    clearSeek() {
       if(this.searchHistory.length){
         this.alertText="是否清除搜索记录";
         this.showPop = true;
       }
     },
-    closeTip() {      //隐藏遮罩层和弹出框
+    //隐藏遮罩层和弹出框
+    closeTip() {
       this.showAlert = false;
       this.showPop = false;
     },
-    delectSetStore() {  //确定删除搜索记录
+    //确定删除搜索记录
+    delectSetStore() {
       removeStore('searchHistory');
       this.closeTip();
       window.location.reload();   //刷新当前页面
@@ -93,62 +96,6 @@ export default{
 
 $ppr: 12px/1rem; // 样式的rem按照12px进行转换
 
-.header-logo{
-  width: 100%;
-  height: 54px/$ppr;
-  background: url('../../../components/header/d1mcw-logo.png') no-repeat center center;
-  background-size: 75%;
-}
-.header-seek{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  box-sizing: border-box;
-  & > a{
-    width: 100%;
-  }
-  &:before {
-    content: ' ';
-    width: 22px/$ppr;
-    height: 22px/$ppr;
-    background: url('../../../components/header/icon_seek.png') no-repeat center center;
-    background-size: 100%;
-    position: absolute;
-    left: 8px/$ppr;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    margin: auto 0;
-  }
-  .seek-input {
-    display: block;
-    width: 100%;
-    height: 40px/$ppr;
-    border-radius: 2rem;
-    padding: 0 10px/$ppr 0 36px/$ppr;
-    flex: 1;
-    font-size: 1.4rem;
-    font-weight: 700;
-    box-sizing: border-box;
-    border: 1px solid #EAEAEA;
-    margin: auto;
-    font-family: "Microsoft Yahei";
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow-x: hidden;
-    &::-webkit-input-placeholder{
-      color: #c3c3c3;
-    }
-  }
-}
-.search_bt{
-  font-size: 1.4rem;
-  & a{
-    color: white;
-  }
-}
 .search-terms-page{
   position: absolute;
   top: 0;

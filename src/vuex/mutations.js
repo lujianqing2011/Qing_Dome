@@ -1,22 +1,28 @@
 
-import { GET_USERINFO,PAY_COUNT } from './mutations-types.js';
+import { 
+    GET_USERINFO,
+    PAY_COUNT,
+    USER_INFO,
+    RETSET_NAME,
+    ADD_CART
+} from './mutations-types.js';
 import {setStore, getStore} from 'src/config/storage';
 export default{
 
     //加载动画
-    UPDATE_LOADING(state, data){     
-        state.loadingShow = data
-    },
+    // UPDATE_LOADING(state, data){     
+    //     state.loadingShow = data
+    // },
 
     //记录用户信息
-    USER_INFO(state, info){                   
+    [USER_INFO](state, info){                   
         state.userInfo = info;
         state.login = true;
         setStore('user_id', info.user_id);
     },
 
     //修改用户名
-    RETSET_NAME(state,username) {
+    [RETSET_NAME](state,username) {
         state.userInfo = Object.assign({}, state.userInfo,{username})
     },
 
@@ -42,7 +48,7 @@ export default{
     },
 
     //加入购物车
-    ADD_CART(state, {
+    [ADD_CART](state, {
         types_id,
         goods_checked,
         goods_id,
