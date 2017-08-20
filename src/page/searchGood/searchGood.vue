@@ -9,15 +9,15 @@
   </header-top>
   <section class="goods_filter">
     <div class="filter_content">
-      <div class="filter_class" @click="chooseType('default')"><span>默认</span></div>
+      <div class="filter_class" @click="selectCondition(0)"><span>默认</span></div>
       <div class="filter_class">
         <div class="class_div" @click="chooseType('sales')">
           <span>销量</span>
           <i class="iconfont" :class="{ sort_icon:sortIcon === 'sales' }">&#xe60e;</i>
         </div>
         <section class="class_list" v-show="sortIcon==='sales'">
-          <p>价格从低到高</p>
-          <p>价格从高到低</p>
+          <p @click="selectCondition(1)">销售量从低到高</p>
+          <p @click="selectCondition(2)">销售量从高到低</p>
         </section>
       </div>
       <div class="filter_class">
@@ -25,9 +25,9 @@
           <span>价格</span>
           <i class="iconfont" :class="{ sort_icon:sortIcon === 'price' }">&#xe60e;</i>
         </div>
-        <section class="class_list" v-show="sortIcon==='price'">
-          <p>销售量从低到高</p>
-          <p>销售量从高到低</p>
+        <section class="class_list" v-show="sortIcon==='price'" >
+          <p @click="selectCondition(3)">价格从低到高</p>
+          <p @click="selectCondition(4)">价格从高到低</p>
         </section>
       </div>
       <div class="filter_class show_list">
@@ -70,7 +70,6 @@
       </div>
     </div>
   </section>
-  <section class="border_bottom"></section>
   <section class="goods_content">
     <div class="goods_main clearfix">
       <div class="goods_box clearfix">
@@ -78,21 +77,30 @@
           <a href="#" class="goods_list_a">
             <div class="goods_list_img"><img src="../../assets/111.jpg"></div>
             <div class="goods_info">
-              <p class="info">UOVO2017童鞋新款夏季包头儿童凉鞋男童女童搭扣镂空沙滩鞋中小童 虹</p>
+              <p class="info">{{goods.goods_name}}</p>
               <div class="goods_price">
-                <i class="price">¥800.00</i>
-                <del>¥900.00</del>
+                <i class="price">¥{{goods.goods_price}}</i>
+                <i class="sales">销量:{{goods.goods_sales}}</i>
+                <del>¥{{goods.goods_original}}</del>
               </div>
             </div>
           </a>
         </div>
       </div>
     </div>
+    <section class="data_hint">没有数据了哦</section>
   </section>
 </section>
 </template>
 
 <script>
+
+const DEFAULT = 0;    //默认
+const SALES_LOW = 1;  //销量低
+const SALES_TALL = 2; //销量高
+const PRICE_LOW = 3;  //价低
+const PRICE_TALL = 4; //价高
+
 
 import headerTop from 'src/components/header/head';
 import api from 'src/api/getApi';
@@ -118,6 +126,7 @@ export default{
     this.keyword = this.$route.query.key;   //获取传过来的关键字
   },
   methods: {
+    //销量、价格选择框
     chooseType(type) {      //点击顶部选项
       if(this.sortIcon !== type){     //第一次展开  
         this.sortIcon = type
@@ -131,7 +140,65 @@ export default{
     },
     selectFilter(index) {
       this.categoryFilter = index;
+    },
+    //默认、销量、价格选择
+    selectCondition(i) {
+      this.chooseType('default');  //关闭选择框
+      let selectSort = []
+      let goodsList = this.allGoodsList;
+      switch(i)
+      {
+        case SALES_LOW:
+          this.goodsTissue(goodsList,0,selectSort,0)
+          break;
+        case SALES_TALL:
+          this.goodsTissue(goodsList,0,selectSort,1)
+          break;
+        case PRICE_LOW:
+          this.goodsTissue(goodsList,1,selectSort,0)
+          break;
+        case PRICE_TALL:
+          this.goodsTissue(goodsList,1,selectSort,1)
+          break;
+        default:
+          alert(DEFAULT)
+      }
+    },
+    //传来商品列表、选择类型、存放数据的数组、(0：低、1：高)
+    goodsTissue(goodsList,classType,selectSort,t) {
+      selectSort = []
+      this.allGoodsList = []
+      let gList;
+      //取出要选择的信息
+      goodsList.forEach((goods) => {
+        if(classType === 0){
+          gList = 'goods_sales'
+        }else{
+          gList = 'goods_price'
+        }
+        selectSort.push(parseInt(goods[gList]));
+      })
+      //大小进行排序
+      selectSort.sort((a,b) => {
+        let heightLow
+        t === 0? heightLow = a-b : heightLow = b-a; 
+        return heightLow
+      });
+      console.log(selectSort)
+      for(let g=0; selectSort.length > g; g++) {
+        for(let i=0; goodsList.length > i; i++) {
+          console.log(selectSort[g],parseInt(goodsList[i][gList]),"第"+g+"次结束")
+          if(parseInt(goodsList[i][gList]) === selectSort[g]){
+            selectSort[g] = ""
+             console.log("录取",goodsList[i][gList])
+            this.allGoodsList.push(goodsList[i])
+            //console.log(goodsList[i])
+          }
+        }
+        console.log('完成',selectSort)
+      }
     }
+
   },
   data(){
     return{
@@ -145,7 +212,8 @@ export default{
       ],
       categoryGoods: [
         {name: '包邮'},{name: '秒杀饰品'},{name: '折扣'}
-      ]
+      ],
+      selectGoods: []
     }
   }
 }
@@ -174,6 +242,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
   .goods_filter{
     position: relative;
     z-index: 150;
+    border-bottom: 1px solid #ECECEC;
     .filter_content{
       display: flex;
       align-items: center;
@@ -182,8 +251,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       // box-shadow: 0px 0px 5px #FF72A6;
       .filter_class{
         flex: 1;
-        line-height: 28px/$ppr;
-        padding: 10px/$ppr 0;
+        line-height: 48px/$ppr;
         text-align: center;
         font-size: 1.4rem;
         color: #000;
@@ -226,6 +294,7 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
             .restriction{
               padding-bottom: 1rem;
               border-bottom: 1px solid white;
+              color: white;
               & input[type="number"]{
                 width: 70px/$ppr;
                 height: 35px/$ppr;
@@ -302,15 +371,15 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
       }
     }
   }
-  .border_bottom{
-    width: 100%;
-    height: 1px;
-    background: #ECECEC;
-    box-shadow: 0px 0px 5px #D8D8D8;
-  }
   .goods_content{
-    margin-top: 5px/$ppr;
     background: #f2f2f2;
+    position: absolute;
+    top: 105px/$ppr;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    overflow-y: auto;
     .goods_main{
       .goods_box{
         .goods_list{
@@ -356,6 +425,10 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
                   display: inline-block;
                   color: red;
                 }
+                .sales{
+                  float: right;
+                  font-size: 1.2rem;
+                }
                 & del{
                   display: block;
                   height: 24px/$ppr;
@@ -367,7 +440,14 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
           }
         }
       }
-      
+    }
+    .data_hint{
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: white;
+      margin-top: 2px/$ppr;
     }
   }
 }

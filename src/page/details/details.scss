@@ -203,10 +203,14 @@ $size6: 2rem;
     overflow: hidden;
     background: white;
     margin: auto;
+    background-clip: border;
     & img{
       width: 100%;
-      height: 100%;
       max-width: 800px;
+      max-height: 480px;
+    }
+    .swiper-container{
+      max-height: 480px;
     }
     .hide_bag_img{
       position: absolute;

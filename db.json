@@ -404,7 +404,7 @@
           "goods_name": "新款简约净色舒适百搭",
           "goods_price": "85",
           "goods_original": "185",
-          "goods_sales": "152",
+          "goods_sales": "48",
           "goods_freight": 5,
           "goods_standard": {
             "size": [
@@ -499,9 +499,9 @@
           "id": 2,
           "goods_id": "002",
           "goods_name": "百搭七分休闲裤",
-          "goods_price": "85",
-          "goods_original": "185",
-          "goods_sales": "152",
+          "goods_price": "136",
+          "goods_original": "65",
+          "goods_sales": "90",
           "goods_freight": 5,
           "goods_standard": {
             "size": [
@@ -595,6 +595,76 @@
               "content": "很好看",
               "time": "1469281964000",
               "pic": ""
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "goods_id": "021",
+          "goods_name": "夏装新款简约",
+          "goods_price": "95",
+          "goods_original": "355",
+          "goods_sales": "90",
+          "goods_freight": 5,
+          "goods_standard": {
+            "size": [
+              "42",
+              "65",
+              "13",
+              "45",
+              "78",
+              "10"
+            ],
+            "etalon": [
+              "普通规格",
+              "中级规格",
+              "高级规格",
+              "超级规格"
+            ],
+            "color": [
+              {
+                "name": "22青色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "五彩色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              },
+              {
+                "name": "黄金色",
+                "pic": "00101.png"
+              }
+            ]
+          },
+          "goods_pic": "http://localhost/vue_ljq/src/assets/1113.jpg",
+          "goods_img": [
+            "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+            "http://localhost/vue_ljq/src/assets/details/2222222.jpg"
+          ],
+          "goods_comment": [
+            {
+              "type": 0,
+              "userName": "2百万刘",
+              "userHeadPortrait": "http://localhost/vue_ljq/src/assets/toux.jpg",
+              "rate": "0",
+              "content": "很好看",
+              "time": "1469281964000",
+              "pic": [
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg",
+                "http://localhost/vue_ljq/src/assets/details/1111111.jpg"
+              ]
             }
           ]
         },
