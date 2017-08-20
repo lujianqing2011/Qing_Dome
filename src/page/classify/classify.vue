@@ -1,8 +1,5 @@
 <template>
 <div class="page-classify">
-  <!-- <div class="page-star">
-    <star :size="36" :score="4.9"></star>
-  </div> -->
   <header-top header-title="分类" goBack="true"></header-top>
   <div>
   <div class="classify">
@@ -163,11 +160,9 @@
 
 import BScroll from 'better-scroll';
 import headerTop from 'src/components/header/head';
-// import Star from '../../components/star/star'
 
 export default {
   components: {
-    // Star,
     BScroll,
     headerTop
   },

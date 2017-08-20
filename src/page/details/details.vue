@@ -64,7 +64,6 @@
 
       <swiper-slide>
         <div class="details-comment d_top">
-          <!-- <m-evaluate :goodsComment="goodsComment"></m-evaluate> -->
           <div class="evaluate">
             <div class="evaluate-type">
               <span class="type-bt all" :class="{'on':selectTypeBt === 2}" @click="select(2,$event)" > {{desc.all}} {{goodsComment.length}}</span>
@@ -83,7 +82,7 @@
                   <span class="user-time">{{item.time}}</span>
                 </div>
                 <div class="user-evaluate">
-                  <span>[好评]</span>
+                  <span><star :size="36" :score="4.9"></star></span>
                   <span>{{item.content}}</span>
                 </div>
                 <div class="user-img" ref="bagImgSrc">
@@ -138,12 +137,12 @@
 <script>
 
 import headerTop from 'src/components/header/head';
-import MEvaluate from 'src/components/evaluate/evaluate';
 import { setStore, getStore, removeStore } from 'src/config/storage';
 import { mapMutations } from 'vuex';
 import MBanner from 'src/components/banner/banner';
 import MCountTwo from 'src/components/common/countTwo';
 import popBox from 'src/components/common/popbox';
+import Star from '../../components/star/star'
 import BScroll from 'better-scroll';
 
 const TAB_TITLE = ["基本信息","商品详情","评价"]
@@ -154,10 +153,10 @@ const ALL = 2
 export default {
   components:{
     headerTop,
-    MEvaluate,
     MBanner,
     MCountTwo,
     popBox,
+    Star,
     BScroll
   },
   computed: {
