@@ -109,23 +109,6 @@ $ppr: 12px/1rem; // 样式的rem按照12px进行转换
     }
     .time_countdown{
       flex: 2;
-      & .time {
-        color: #000;
-        font-size: 0;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        .alike{
-          font-size: 1.2rem;
-          border: 1px solid #ececec;
-          border-radius: 2px;
-          padding: 5px/$ppr;
-          color: #000;
-        }
-        .alike-b {
-          font-size: 1.2rem;
-          margin: 0 5px/$ppr;
-        }
-      }
     }
     .more{
       flex: 1;

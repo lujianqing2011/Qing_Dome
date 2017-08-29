@@ -264,7 +264,7 @@ export default {
       this.cartGoods.splice(index,1);   //从购物车列表删除
       this.clearingGoods.splice(index,1);   //从已选的商品列表删除
       this.compileIndex = null;
-      this.countMoney()
+      this.countMoney();
     }
 
   }

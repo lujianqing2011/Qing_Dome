@@ -161,6 +161,7 @@ export default{
           this.goodsTissue(goodsList,1,selectSort,1)
           break;
         default:
+        console.log(goodsList)
           alert(DEFAULT)
       }
     },

@@ -83,8 +83,6 @@ export default{
                 "goods_freight": goods_freight
             }
         }
-        console.log(8,JSON.stringify(state.cartList))
-        console.log(4,JSON.stringify(types[goods_id]))
         state.cartList = {...cart}
         setStore("cart_list", state.cartList)
     }

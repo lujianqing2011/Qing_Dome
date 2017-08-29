@@ -38,17 +38,11 @@
       <div class="title_h2">
         <span class="title">限时商品·闪购</span>
         <span class="time_countdown">
-          <div class="time">
-            <span class="alike hour-s">{{timeH}}</span>
-            <span class="alike-b">:</span>
-            <span class="alike minute">{{timeM}}</span>
-            <span class="alike-b">:</span>
-            <span class="alike seconds">{{timeS}}</span>
-          </div>
+          <m-countdown></m-countdown>
         </span>
         <a class="more" href="javascript:;">更多</a>
       </div>
-      <div class="module" id="mmm">
+      <div class="module">
         <div class="width_1"></div>
         <div class="seckill_time">
           <img src="../../assets/index/and-v-03222.jpg">
@@ -60,7 +54,6 @@
           </ul>
         </div>
       </div>
-
       <!-- 秒杀商品E -->
 
       <!-- 猜你喜欢 -->
@@ -82,6 +75,8 @@ import MFooter from 'src/components/footer/footer';   //底部导航
 import MNotice from 'src/components/notice/notice';   //热点公告
 import MGoods from 'src/components/guessGoods/guessGoods';    //猜你喜欢的商品
 import BScroll from 'better-scroll';      //滑动插件
+import MCountdown from 'src/components/common/countdown';   //倒计时
+
 
 export default {
   components: {
@@ -89,18 +84,18 @@ export default {
     MBanner,
     MFooter,
     MNotice,
+    MCountdown,
     MGoods
   },
   mounted() {
     this.$nextTick(() => {
-      this._scrollX(),
-      this.timeLimit()
+      this._scrollX()
     })
   },
   methods: {
     _scrollX() {    //首页的秒杀区（图片水平滑动）
       let picWidth = this.$refs.picList.getElementsByTagName('li')[0].offsetWidth   //图片的宽度
-      let margin = 6
+      let margin = 6;
       let picLength = this.$refs.picList.getElementsByTagName('li').length
       let elementUl = this.$refs.picList
       let width = elementUl.style.width = (picWidth + margin) * picLength - margin +'px'
@@ -113,46 +108,10 @@ export default {
           console.log('当到最后一个，还用力拖到时执行这个函数')
         }
       })
-    },
-    timeLimit(){    //秒杀商品的倒计时
-      let setTime = this.setTime
-      let nowtime = new Date(); // 当前时间
-      let endtime = new Date(setTime); // 结束时间
-      let lefttime= parseInt((endtime.getTime() - nowtime.getTime())/1000);
-      let d = parseInt(lefttime / (24 * 60 * 60));  //天数
-      let h = parseInt(lefttime / (60 * 60) % 24);  //小时
-      let m = parseInt(lefttime / 60 % 60);  //分钟
-      let s = parseInt(lefttime % 60);  //秒数
-      h = this.checkTime(h)
-      m = this.checkTime(m)
-      s = this.checkTime(s)
-      this.timeD = d
-      this.timeH = h
-      this.timeM = m
-      this.timeS = s
-      // console.log(d+'天'+h+'小时'+m+'分'+s+'秒');
-      if(lefttime <= 0){
-        alert('团购已经结束')
-        clearTimeout(loopTime)
-        return
-      }else{
-        let loopTime = setTimeout(this.timeLimit,1000);
-      }
-    },
-    checkTime(i) {  //秒杀商品的时间（s,m），小于10时，为数字前面添加0
-      if(i < 10) {
-        i = "0" + i
-      }
-      return i
     }
   },
   data() {
     return {
-      setTime: '2017/08/30,23:35:20',
-      timeD: 0,
-      timeH: 0,
-      timeM: 0,
-      timeS: 0,
       banner:[
         {
           bannerimg: require('../../assets/index/b_1.png'),
