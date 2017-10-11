@@ -31,16 +31,16 @@ export const loadMore = {
                     setTop = el.offsetTop;
                 }, false)
 
-                // el.addEventListener('touchmove', () => {
-                //     loadMore();
-                // }, false)
-
-                el.addEventListener('touchend', (
-                    ) => {
-                    oldScrollTop = scrollEl.scrollTop;
-                    moveEnd();
+                el.addEventListener('touchmove', () => {
                     loadMore();
                 }, false)
+
+                // el.addEventListener('touchend', (
+                //     ) => {
+                //     oldScrollTop = scrollEl.scrollTop;
+                //     moveEnd();
+                //     loadMore();
+                // }, false)
 
                 const moveEnd = () => {
                     requestFram = requestAnimationFrame(() => {

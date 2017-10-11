@@ -1,18 +1,18 @@
 <template>
 <header id="header-top">
   <section class="header">
-    <section class="header-left">
+    <div class="header-left">
       <slot name="logo"></slot>
       <div class="goBack iconfont" v-if="goBack" @click="$router.go(-1)">&#xe67c;</div>
-    </section>
-    <section class="header-title">
+    </div>
+    <div class="header-title">
       <div class="title" v-if="headerTitle" >{{headerTitle}}</div>
       <slot name="seek"></slot>
-    </section>
-    <section class="header-right change_color">
+    </div>
+    <div class="header-right change_color">
       <div class="headerNav" v-if="headerNav" :class="{ hide:showNav }" @click="showNav = !showNav"></div>
       <slot name="search"></slot>
-    </section>
+    </div>
   </section>
   
   <nav class="header-nav" :class="{show_nav: showNav}" v-if="headerNav" ref="navSile">

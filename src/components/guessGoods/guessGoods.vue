@@ -66,7 +66,6 @@ export default{
       this.offset += 6;
       this.showLoading = true;
       api.getGuessLikeGoods(this.offset).then((res) => {
-        alert(this.offset)
         this.allGoodsList = [...this.allGoodsList,...res]
         this.$nextTick(() => {
           this.showLoading = false;

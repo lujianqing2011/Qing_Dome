@@ -15,7 +15,7 @@ export default{
       timeH: 0,
       timeM: 0,
       timeS: 0,
-      setTime: '2017/08/30,23:05:00'
+      setTime: '2017/11/30,23:05:00'
     }
   },
   mounted() {

@@ -240,7 +240,7 @@ export default {
     goConfirmOrder() {
       let clearingGoods = JSON.stringify(this.clearingGoods)
       this.$router.push({path:'/confirmOrder', query:{clearingGoods}})
-      console.log([...this.clearingGoods])
+      //console.log([...this.clearingGoods])
     },
 
     /**

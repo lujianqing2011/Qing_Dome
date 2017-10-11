@@ -75,7 +75,7 @@
       <div class="goods_box clearfix">
         <div class="goods_list" v-for="goods in allGoodsList">
           <a href="#" class="goods_list_a">
-            <div class="goods_list_img"><img src="../../assets/111.jpg"></div>
+            <div class="goods_list_img"><img :src="goods.goods_pic"></div>
             <div class="goods_info">
               <p class="info">{{goods.goods_name}}</p>
               <div class="goods_price">
@@ -120,6 +120,7 @@ export default{
         })
       })
       this.allGoodsList = all_goods
+      console.log(this.allGoodsList)
     })
   },
   mounted(){

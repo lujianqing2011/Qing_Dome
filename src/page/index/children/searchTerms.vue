@@ -76,7 +76,7 @@ export default{
     delectSetStore() {
       removeStore('searchHistory');
       this.closeTip();
-      window.location.reload();   //刷新当前页面
+      this.searchHistory = ""
     }
   },
   data(){
